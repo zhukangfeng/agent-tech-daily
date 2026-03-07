@@ -1,6 +1,6 @@
 {
   "date": "2026-03-07",
-  "generated_at": "2026-03-07T12:51:49.736Z",
+  "generated_at": "2026-03-07T12:58:00.181Z",
   "source": "Multi-source",
   "sources": [
     "GitHub",
@@ -29,7 +29,7 @@
         "MCP",
         "Persona"
       ],
-      "summary": "概要：围绕 MCP 协议做工具标准化连接，提升 Agent 与内部/外部系统的可扩展互操作能力。"
+      "summary": "概要：这篇内容围绕「doobidoo/mcp memory service」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；涉及记忆层与状态管理。文中提到“Open source persistent memory for AI agent”。信息更偏工程实现"
     },
     {
       "source": "Reddit",
@@ -37,14 +37,14 @@
       "title": "Open WebUI’s New Open Terminal + “Native” Tool Calling + Qwen3.5 35b = Holy Sh!t!!!",
       "description": "Let me pre-apologize for this long and rambling post but I get excited by stuff like this. \n\nI think a lot of folks here (myself included) have been largely oblivious to what Tim &amp; company over at Open WebUI has been up to lately with their repo.  I know I’ve been too busy tr",
       "url": "https://www.reddit.com/gallery/1rmplvs",
-      "metric": "⬆ 692 💬154",
-      "metricValue": 846,
+      "metric": "⬆ 691 💬154",
+      "metricValue": 845,
       "published_at": "2026-03-06T20:44:34.000Z",
       "score": 55.13,
       "tags": [
         "General"
       ],
-      "summary": "概要：围绕智能体工程实践与平台化能力建设，目标是提升真实业务场景中的可用性与落地效率。"
+      "summary": "概要：这篇内容围绕「Open WebUI’s New Open Terminal + “Native” 」展开，主要在讲：带有较强实战讨论与经验复盘。文中提到“Let me pre apologize for this long and ram”。信息更偏社区反馈与实测体验。"
     },
     {
       "source": "GitHub",
@@ -59,7 +59,7 @@
       "tags": [
         "General"
       ],
-      "summary": "概要：围绕智能体工程实践与平台化能力建设，目标是提升真实业务场景中的可用性与落地效率。"
+      "summary": "概要：这篇内容围绕「sinanuozdemir/oreilly ai agents」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“An introduction to the world of AI Agents”。信息更偏工程实现与代码能力。"
     },
     {
       "source": "GitHub",
@@ -75,7 +75,7 @@
         "MCP",
         "Eval"
       ],
-      "summary": "概要：核心在评测与基准对比，帮助团队量化模型/Agent 方案在质量与稳定性上的差异。"
+      "summary": "概要：这篇内容围绕「hidai25/eval view」展开，主要在讲：强调评测对比与稳定性验证；提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“Proof your AI agent still works. Regressio”。信息更偏工程实现与代码能力"
     },
     {
       "source": "GitHub",
@@ -91,7 +91,7 @@
         "MCP",
         "RAG"
       ],
-      "summary": "概要：聚焦检索增强生成（RAG）链路，强调知识召回、答案准确性与上下文利用效率。"
+      "summary": "概要：这篇内容围绕「MDalamin5/End to End Agentic Ai Automation」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；支持多智能体编排与流程化落地。文中提到“This repository contains hands on"
     },
     {
       "source": "Reddit",
@@ -99,14 +99,14 @@
       "title": "New OpenSource Models Available—Sarvam 30B and 105B trained from scratch by an Indian based company",
       "description": "",
       "url": "https://www.sarvam.ai/blogs/sarvam-30b-105b",
-      "metric": "⬆ 374 💬40",
-      "metricValue": 414,
+      "metric": "⬆ 378 💬40",
+      "metricValue": 418,
       "published_at": "2026-03-06T19:08:31.000Z",
-      "score": 51.42,
+      "score": 51.47,
       "tags": [
         "General"
       ],
-      "summary": "概要：围绕智能体工程实践与平台化能力建设，目标是提升真实业务场景中的可用性与落地效率。"
+      "summary": "概要：这篇内容围绕「New OpenSource Models Available—Sarvam 30B」展开，主要在讲：发布了新的能力或版本。文中提到“New OpenSource Models Available—Sarvam 30B”。信息更偏社区反馈与实测体验。"
     },
     {
       "source": "Reddit",
@@ -114,29 +114,14 @@
       "title": "Finally bought an RTX 6000 Max-Q: Pros, cons, notes and ramblings",
       "description": "**Transparency:** I used an LLM to help figure out a good title and write the TLDR, but the post content is otherwise 100% written by me with zero help from an LLM.\n\n# Background\n\nI recently asked Reddit to [talk me out of buying an RTX Pro 6000](https://www.reddit.com/r/LocalLLa",
       "url": "https://reddit.com/r/LocalLLaMA/comments/1rmn4gx/finally_bought_an_rtx_6000_maxq_pros_cons_notes/",
-      "metric": "⬆ 153 💬120",
-      "metricValue": 273,
+      "metric": "⬆ 151 💬120",
+      "metricValue": 271,
       "published_at": "2026-03-06T19:10:55.000Z",
-      "score": 51.25,
+      "score": 51.21,
       "tags": [
         "General"
       ],
-      "summary": "概要：围绕智能体工程实践与平台化能力建设，目标是提升真实业务场景中的可用性与落地效率。"
-    },
-    {
-      "source": "Reddit",
-      "id": "rd:1rmp3ep",
-      "title": "Llama.cpp: now with automatic parser generator",
-      "description": "I am happy to report that after months of testing, feedback, reviews and refactorings, the autoparser solution has been merged into the mainline llama.cpp code.\n\nThis solution follows the big changes we've done to our templating and parsing code: ngxson's new Jinja system which i",
-      "url": "https://reddit.com/r/LocalLLaMA/comments/1rmp3ep/llamacpp_now_with_automatic_parser_generator/",
-      "metric": "⬆ 326 💬40",
-      "metricValue": 366,
-      "published_at": "2026-03-06T20:24:52.000Z",
-      "score": 50.78,
-      "tags": [
-        "General"
-      ],
-      "summary": "概要：围绕智能体工程实践与平台化能力建设，目标是提升真实业务场景中的可用性与落地效率。"
+      "summary": "概要：这篇内容围绕「Finally bought an RTX 6000 Max Q: Pros, co」展开，主要在讲：带有较强实战讨论与经验复盘。文中提到“Transparency: I used an LLM to help figure”。信息更偏社区反馈与实测体验。"
     },
     {
       "source": "Reddit",
@@ -144,14 +129,29 @@
       "title": "How many of you have seriously started using AI agents in your workplace or day to day life?",
       "description": "What agents do you use and how has it impacted your work?\n\nCurious how people in different industries are adopting AI agents, and to what scale. \n\nIf you build your own agents from scratch, feel free to dorp your techstack or bare metal pipeline!\n\n",
       "url": "https://reddit.com/r/LocalLLaMA/comments/1rmwov8/how_many_of_you_have_seriously_started_using_ai/",
-      "metric": "⬆ 64 💬105",
-      "metricValue": 169,
+      "metric": "⬆ 62 💬106",
+      "metricValue": 168,
       "published_at": "2026-03-07T01:35:57.000Z",
-      "score": 50.77,
+      "score": 50.73,
       "tags": [
         "General"
       ],
-      "summary": "概要：围绕智能体工程实践与平台化能力建设，目标是提升真实业务场景中的可用性与落地效率。"
+      "summary": "概要：这篇内容围绕「How many of you have seriously started usi」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“What agents do you use and how has it impa”。信息更偏社区反馈与实测体验"
+    },
+    {
+      "source": "Reddit",
+      "id": "rd:1rmp3ep",
+      "title": "Llama.cpp: now with automatic parser generator",
+      "description": "I am happy to report that after months of testing, feedback, reviews and refactorings, the autoparser solution has been merged into the mainline llama.cpp code.\n\nThis solution follows the big changes we've done to our templating and parsing code: ngxson's new Jinja system which i",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1rmp3ep/llamacpp_now_with_automatic_parser_generator/",
+      "metric": "⬆ 321 💬40",
+      "metricValue": 361,
+      "published_at": "2026-03-06T20:24:52.000Z",
+      "score": 50.7,
+      "tags": [
+        "General"
+      ],
+      "summary": "概要：这篇内容围绕「Llama.cpp: now with automatic parser gener」展开，主要在讲：发布了新的能力或版本。文中提到“I am happy to report that after months of ”。信息更偏社区反馈与实测体验。"
     },
     {
       "source": "Reddit",
@@ -159,14 +159,14 @@
       "title": "[R] Low-effort papers",
       "description": "I came across a professor with 100+ published papers, and the pattern is striking. Almost every paper follows the same formula: take a new YOLO version (v8, v9, v10, v11...), train it on a public dataset from Roboflow, report results, and publish. Repeat for every new YOLO releas",
       "url": "https://reddit.com/r/MachineLearning/comments/1rmk49w/r_loweffort_papers/",
-      "metric": "⬆ 194 💬54",
-      "metricValue": 248,
+      "metric": "⬆ 195 💬54",
+      "metricValue": 249,
       "published_at": "2026-03-06T17:21:55.000Z",
-      "score": 48.75,
+      "score": 48.78,
       "tags": [
         "General"
       ],
-      "summary": "概要：围绕智能体工程实践与平台化能力建设，目标是提升真实业务场景中的可用性与落地效率。"
+      "summary": "概要：这篇内容围绕「Low effort papers」展开，主要在讲：含研究视角与方法论信号。文中提到“I came across a professor with 100+ publis”。信息更偏社区反馈与实测体验。"
     },
     {
       "source": "Reddit",
@@ -174,29 +174,29 @@
       "title": "sarvamai/sarvam-105b · Hugging Face",
       "description": "Not too bad for a first effort built from the ground-up\n\n[https://www.sarvam.ai/blogs/sarvam-30b-105b](https://www.sarvam.ai/blogs/sarvam-30b-105b)",
       "url": "https://huggingface.co/sarvamai/sarvam-105b",
-      "metric": "⬆ 143 💬26",
-      "metricValue": 169,
+      "metric": "⬆ 148 💬26",
+      "metricValue": 174,
       "published_at": "2026-03-06T17:37:28.000Z",
-      "score": 46.77,
+      "score": 46.92,
       "tags": [
         "General"
       ],
-      "summary": "概要：围绕智能体工程实践与平台化能力建设，目标是提升真实业务场景中的可用性与落地效率。"
+      "summary": "概要：这篇内容围绕「sarvamai/sarvam 105b · Hugging Face」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Not too bad for a first effort built from ”。信息更偏社区反馈与实测体验。"
     },
     {
       "source": "Reddit",
-      "id": "rd:1rmilgg",
-      "title": "OpenAI launches GPT-5.4: New model hits 83% on pro-level knowledge benchmark",
-      "description": "",
-      "url": "https://interestingengineering.com/ai-robotics/gpt-5-4-openai-ai-model-release",
-      "metric": "⬆ 87 💬27",
-      "metricValue": 114,
-      "published_at": "2026-03-06T16:27:10.000Z",
-      "score": 46.73,
+      "id": "rd:1rn2qlb",
+      "title": "Qwen3.5 27B vs 35B Unsloth quants - LiveCodeBench Evaluation Results",
+      "description": "# Hardware\n\n* **GPU**: RTX 4060 Ti 16GB VRAM\n* **RAM**: 32GB\n* **CPU**: i7-14700 (2.10 GHz)\n* **OS**: Windows 11\n\n# Required fixes to LiveCodeBench code for Windows compatibility.\n\n* clone this repo [https://github.com/LiveCodeBench/LiveCodeBench](https://github.com/LiveCodeBench",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1rn2qlb/qwen35_27b_vs_35b_unsloth_quants_livecodebench/",
+      "metric": "⬆ 69 💬42",
+      "metricValue": 111,
+      "published_at": "2026-03-07T06:33:17.000Z",
+      "score": 46.59,
       "tags": [
         "Eval"
       ],
-      "summary": "概要：核心在评测与基准对比，帮助团队量化模型/Agent 方案在质量与稳定性上的差异。"
+      "summary": "概要：这篇内容围绕「Qwen3.5 27B vs 35B Unsloth quants LiveCode」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Hardware GPU : RTX 4060 Ti 16GB VRAM RAM :”。信息更偏社区反馈与实测体验"
     }
   ]
 }
