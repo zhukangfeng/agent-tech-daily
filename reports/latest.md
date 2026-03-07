@@ -1,16 +1,16 @@
 # 大模型智能体技术日报 2026-03-07
 
-生成时间: 2026-03-07T10:17:15.009Z
+生成时间: 2026-03-07T10:49:07.577Z
 
 ## 今日建议先看（Top 10）
 
 ### 1. [browser-use/browser-use](https://github.com/browser-use/browser-use)
-- ⭐ 79822 | 语言: Python | 最近更新: 2026-03-06T16:53:25Z
+- ⭐ 79825 | 语言: Python | 最近更新: 2026-03-06T16:53:25Z
 - 简介: 🌐 Make websites accessible for AI agents. Automate tasks online with ease.
 - 动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。
 
 ### 2. [OpenBB-finance/OpenBB](https://github.com/OpenBB-finance/OpenBB)
-- ⭐ 62657 | 语言: Python | 最近更新: 2026-03-07T05:07:32Z
+- ⭐ 62658 | 语言: Python | 最近更新: 2026-03-07T05:07:32Z
 - 简介: Financial data platform for analysts, quants and AI agents.
 - 动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。
 
@@ -20,7 +20,7 @@
 - 动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。
 
 ### 4. [google/adk-python](https://github.com/google/adk-python)
-- ⭐ 18212 | 语言: Python | 最近更新: 2026-03-07T06:11:10Z
+- ⭐ 18213 | 语言: Python | 最近更新: 2026-03-07T06:11:10Z
 - 简介: An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.
 - 动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。
 
@@ -30,7 +30,7 @@
 - 动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。
 
 ### 6. [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps)
-- ⭐ 100199 | 语言: Python | 最近更新: 2026-03-02T07:16:17Z
+- ⭐ 100205 | 语言: Python | 最近更新: 2026-03-02T07:16:17Z
 - 简介: Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.
 - 动作：用一组真实业务问答做RAG召回对比（命中率/延迟/成本）。
 
@@ -45,12 +45,12 @@
 - 动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。
 
 ### 9. [microsoft/agent-framework](https://github.com/microsoft/agent-framework)
-- ⭐ 7715 | 语言: Python | 最近更新: 2026-03-07T04:08:49Z
+- ⭐ 7716 | 语言: Python | 最近更新: 2026-03-07T04:08:49Z
 - 简介: A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET.
 - 动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。
 
 ### 10. [MemMachine/MemMachine](https://github.com/MemMachine/MemMachine)
-- ⭐ 4611 | 语言: Python | 最近更新: 2026-03-06T23:53:42Z
+- ⭐ 4612 | 语言: Python | 最近更新: 2026-03-06T23:53:42Z
 - 简介: Universal memory layer for AI Agents. It provides scalable, extensible, and interoperable memory storage and retrieval to streamline AI agent state management for next-generation autonomous systems.
 - 动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。
 

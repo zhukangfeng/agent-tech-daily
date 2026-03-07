@@ -5,96 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agent Tech Daily</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 980px; margin: 24px auto; line-height: 1.55; padding: 0 12px; }
-    h1 { margin-bottom: 4px; }
-    .meta { color: #666; margin-bottom: 18px; }
-    li { margin-bottom: 14px; }
-    .card { background: #f7f7f8; padding: 12px; border-radius: 10px; }
+    :root { --bg:#0b1020; --panel:#121a31; --panel2:#0f1730; --text:#e7ecff; --muted:#9fb0d9; --accent:#6ea8fe; --line:#26345f; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:var(--bg); color:var(--text); }
+    .layout { display:grid; grid-template-columns: 300px 1fr; min-height:100vh; }
+    .sidebar { position:sticky; top:0; height:100vh; overflow:auto; border-right:1px solid var(--line); background:linear-gradient(180deg,#101935,#0b1020); padding:20px 16px; }
+    .brand { font-size:20px; font-weight:700; margin-bottom:6px; }
+    .meta { color:var(--muted); font-size:13px; margin-bottom:16px; }
+    .nav h3 { font-size:13px; color:var(--muted); margin:18px 0 8px; text-transform: uppercase; letter-spacing:.06em; }
+    .nav a { display:block; color:#cfe0ff; text-decoration:none; padding:8px 10px; border-radius:8px; margin-bottom:4px; border:1px solid transparent; }
+    .nav a:hover { background:#172349; border-color:#2f427a; }
+    .main { padding:24px; max-width:1100px; }
+    .hero { background:linear-gradient(135deg,#16254d,#101a36); border:1px solid var(--line); border-radius:14px; padding:18px; margin-bottom:16px; }
+    .hero h1 { margin:0 0 8px; font-size:28px; }
+    .grid { display:grid; gap:12px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; }
+    .repo-title { color:#dcebff; text-decoration:none; font-size:18px; font-weight:700; }
+    .repo-title:hover { color:#9ec5ff; }
+    .repo-meta { color:var(--muted); font-size:13px; margin:6px 0; }
+    .repo-desc { color:#d5e0ff; margin:8px 0; }
+    .repo-action { color:#b7ccff; background:#111d3d; border-left:3px solid var(--accent); padding:8px 10px; border-radius:8px; font-size:14px; }
+    .section-title { margin:18px 0 10px; font-size:18px; }
+    ul { margin:8px 0 0 18px; }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position:relative; height:auto; border-right:none; border-bottom:1px solid var(--line); }
+      .main { padding:14px; }
+    }
   </style>
 </head>
 <body>
-  <h1>大模型智能体技术日报</h1>
-  <div class="meta">日期：2026-03-07 · 自动生成于 2026-03-07T10:17:15.009Z</div>
-  <div class="card">
-    <h2>今日 Top 10</h2>
-    <ol>
-    <li>
-      <a href="https://github.com/browser-use/browser-use" target="_blank" rel="noreferrer"><b>1. browser-use/browser-use</b></a>
-      <div>⭐ 79822 · Python · 更新 2026-03-06</div>
-      <div>🌐 Make websites accessible for AI agents. Automate tasks online with ease.</div>
-      <div><i>动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</i></div>
-    </li>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">Agent Tech Daily</div>
+      <div class="meta">日期：2026-03-07<br/>更新：2026-03-07T10:49:07.577Z</div>
+      <nav class="nav">
+        <h3>导航</h3>
+        <a href="#latest">最新技术文章</a>
+        <a href="#lead">技术负责人视角</a>
+        <a href="#history">历史归档</a>
+        <h3>今日 Top 10</h3>
+        <a href="#item-1">1. browser-use/browser-use</a><a href="#item-2">2. OpenBB-finance/OpenBB</a><a href="#item-3">3. ComposioHQ/composio</a><a href="#item-4">4. google/adk-python</a><a href="#item-5">5. emcie-co/parlant</a><a href="#item-6">6. Shubhamsaboo/awesome-llm-apps</a><a href="#item-7">7. MemoriLabs/Memori</a><a href="#item-8">8. e2b-dev/E2B</a><a href="#item-9">9. microsoft/agent-framework</a><a href="#item-10">10. MemMachine/MemMachine</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <section class="hero">
+        <h1>大模型智能体技术日报</h1>
+        <div class="meta">每天自动聚合 GitHub 最新 Agent 技术动态，附可执行动作建议。</div>
+      </section>
 
-    <li>
-      <a href="https://github.com/OpenBB-finance/OpenBB" target="_blank" rel="noreferrer"><b>2. OpenBB-finance/OpenBB</b></a>
-      <div>⭐ 62657 · Python · 更新 2026-03-07</div>
-      <div>Financial data platform for analysts, quants and AI agents.</div>
-      <div><i>动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</i></div>
-    </li>
+      <section id="latest">
+        <h2 class="section-title">最新技术文章（Top 10）</h2>
+        <div class="grid">
+          
+          <article class="card" id="item-1">
+            <a class="repo-title" href="https://github.com/browser-use/browser-use" target="_blank" rel="noreferrer">1. browser-use/browser-use</a>
+            <div class="repo-meta">⭐ 79825 · Python · 最近更新 2026-03-06</div>
+            <div class="repo-desc">🌐 Make websites accessible for AI agents. Automate tasks online with ease.</div>
+            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
+          </article>
+          <article class="card" id="item-2">
+            <a class="repo-title" href="https://github.com/OpenBB-finance/OpenBB" target="_blank" rel="noreferrer">2. OpenBB-finance/OpenBB</a>
+            <div class="repo-meta">⭐ 62658 · Python · 最近更新 2026-03-07</div>
+            <div class="repo-desc">Financial data platform for analysts, quants and AI agents.</div>
+            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
+          </article>
+          <article class="card" id="item-3">
+            <a class="repo-title" href="https://github.com/ComposioHQ/composio" target="_blank" rel="noreferrer">3. ComposioHQ/composio</a>
+            <div class="repo-meta">⭐ 27309 · TypeScript · 最近更新 2026-03-07</div>
+            <div class="repo-desc">Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.</div>
+            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
+          </article>
+          <article class="card" id="item-4">
+            <a class="repo-title" href="https://github.com/google/adk-python" target="_blank" rel="noreferrer">4. google/adk-python</a>
+            <div class="repo-meta">⭐ 18213 · Python · 最近更新 2026-03-07</div>
+            <div class="repo-desc">An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</div>
+            <div class="repo-action">动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。</div>
+          </article>
+          <article class="card" id="item-5">
+            <a class="repo-title" href="https://github.com/emcie-co/parlant" target="_blank" rel="noreferrer">5. emcie-co/parlant</a>
+            <div class="repo-meta">⭐ 17808 · Python · 最近更新 2026-03-06</div>
+            <div class="repo-desc">The conversational control layer for customer-facing AI agents - Parlant is a context-engineering framework optimized for controlling customer interactions.</div>
+            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
+          </article>
+          <article class="card" id="item-6">
+            <a class="repo-title" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noreferrer">6. Shubhamsaboo/awesome-llm-apps</a>
+            <div class="repo-meta">⭐ 100205 · Python · 最近更新 2026-03-02</div>
+            <div class="repo-desc">Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.</div>
+            <div class="repo-action">动作：用一组真实业务问答做RAG召回对比（命中率/延迟/成本）。</div>
+          </article>
+          <article class="card" id="item-7">
+            <a class="repo-title" href="https://github.com/MemoriLabs/Memori" target="_blank" rel="noreferrer">7. MemoriLabs/Memori</a>
+            <div class="repo-meta">⭐ 12316 · Python · 最近更新 2026-03-07</div>
+            <div class="repo-desc">SQL Native Memory Layer for LLMs, AI Agents & Multi-Agent Systems</div>
+            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
+          </article>
+          <article class="card" id="item-8">
+            <a class="repo-title" href="https://github.com/e2b-dev/E2B" target="_blank" rel="noreferrer">8. e2b-dev/E2B</a>
+            <div class="repo-meta">⭐ 11164 · MDX · 最近更新 2026-03-06</div>
+            <div class="repo-desc">Open-source, secure environment with real-world tools for enterprise-grade agents.</div>
+            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
+          </article>
+          <article class="card" id="item-9">
+            <a class="repo-title" href="https://github.com/microsoft/agent-framework" target="_blank" rel="noreferrer">9. microsoft/agent-framework</a>
+            <div class="repo-meta">⭐ 7716 · Python · 最近更新 2026-03-07</div>
+            <div class="repo-desc">A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET.</div>
+            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
+          </article>
+          <article class="card" id="item-10">
+            <a class="repo-title" href="https://github.com/MemMachine/MemMachine" target="_blank" rel="noreferrer">10. MemMachine/MemMachine</a>
+            <div class="repo-meta">⭐ 4612 · Python · 最近更新 2026-03-06</div>
+            <div class="repo-desc">Universal memory layer for AI Agents. It provides scalable, extensible, and interoperable memory storage and retrieval to streamline AI agent state management for next-generation autonomous systems.</div>
+            <div class="repo-action">动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。</div>
+          </article>
+        </div>
+      </section>
 
-    <li>
-      <a href="https://github.com/ComposioHQ/composio" target="_blank" rel="noreferrer"><b>3. ComposioHQ/composio</b></a>
-      <div>⭐ 27309 · TypeScript · 更新 2026-03-07</div>
-      <div>Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.</div>
-      <div><i>动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</i></div>
-    </li>
-
-    <li>
-      <a href="https://github.com/google/adk-python" target="_blank" rel="noreferrer"><b>4. google/adk-python</b></a>
-      <div>⭐ 18212 · Python · 更新 2026-03-07</div>
-      <div>An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</div>
-      <div><i>动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。</i></div>
-    </li>
-
-    <li>
-      <a href="https://github.com/emcie-co/parlant" target="_blank" rel="noreferrer"><b>5. emcie-co/parlant</b></a>
-      <div>⭐ 17808 · Python · 更新 2026-03-06</div>
-      <div>The conversational control layer for customer-facing AI agents - Parlant is a context-engineering framework optimized for controlling customer interactions.</div>
-      <div><i>动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</i></div>
-    </li>
-
-    <li>
-      <a href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noreferrer"><b>6. Shubhamsaboo/awesome-llm-apps</b></a>
-      <div>⭐ 100199 · Python · 更新 2026-03-02</div>
-      <div>Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.</div>
-      <div><i>动作：用一组真实业务问答做RAG召回对比（命中率/延迟/成本）。</i></div>
-    </li>
-
-    <li>
-      <a href="https://github.com/MemoriLabs/Memori" target="_blank" rel="noreferrer"><b>7. MemoriLabs/Memori</b></a>
-      <div>⭐ 12316 · Python · 更新 2026-03-07</div>
-      <div>SQL Native Memory Layer for LLMs, AI Agents & Multi-Agent Systems</div>
-      <div><i>动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</i></div>
-    </li>
-
-    <li>
-      <a href="https://github.com/e2b-dev/E2B" target="_blank" rel="noreferrer"><b>8. e2b-dev/E2B</b></a>
-      <div>⭐ 11164 · MDX · 更新 2026-03-06</div>
-      <div>Open-source, secure environment with real-world tools for enterprise-grade agents.</div>
-      <div><i>动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</i></div>
-    </li>
-
-    <li>
-      <a href="https://github.com/microsoft/agent-framework" target="_blank" rel="noreferrer"><b>9. microsoft/agent-framework</b></a>
-      <div>⭐ 7715 · Python · 更新 2026-03-07</div>
-      <div>A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET.</div>
-      <div><i>动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</i></div>
-    </li>
-
-    <li>
-      <a href="https://github.com/MemMachine/MemMachine" target="_blank" rel="noreferrer"><b>10. MemMachine/MemMachine</b></a>
-      <div>⭐ 4611 · Python · 更新 2026-03-06</div>
-      <div>Universal memory layer for AI Agents. It provides scalable, extensible, and interoperable memory storage and retrieval to streamline AI agent state management for next-generation autonomous systems.</div>
-      <div><i>动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。</i></div>
-    </li></ol>
-  </div>
-  <div class="card" style="margin-top:16px;">
-    <h2>技术负责人视角（本日Top3落地建议）</h2>
-    <ul><li><b>1. browser-use/browser-use</b>：本周安排一个 0.5~1 天的小试点，验证“可观测/可评测/可回滚”。</li>
+      <section id="lead" class="card" style="margin-top:16px;">
+        <h2 class="section-title" style="margin-top:0;">技术负责人视角（本日Top3落地建议）</h2>
+        <ul><li><b>1. browser-use/browser-use</b>：本周安排一个 0.5~1 天的小试点，验证“可观测/可评测/可回滚”。</li>
 <li><b>2. OpenBB-finance/OpenBB</b>：本周安排一个 0.5~1 天的小试点，验证“可观测/可评测/可回滚”。</li>
 <li><b>3. ComposioHQ/composio</b>：本周安排一个 0.5~1 天的小试点，验证“可观测/可评测/可回滚”。</li></ul>
+      </section>
+
+      <section id="history" style="margin-top:16px;" class="card">
+        <h2 class="section-title" style="margin-top:0;">历史归档</h2>
+        <ul><li><a href="../memory/agent-tech-daily/2026-03-07.md">2026-03-07</a></li></ul>
+      </section>
+    </main>
   </div>
-  <h2>历史归档</h2>
-  <ul><li><a href="../memory/agent-tech-daily/2026-03-07.md">2026-03-07</a></li></ul>
 </body>
 </html>
