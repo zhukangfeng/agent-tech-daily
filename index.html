@@ -5,183 +5,196 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agent Tech Daily</title>
   <style>
-    :root { --bg:#0b1020; --panel:#121a31; --panel2:#0f1730; --text:#e7ecff; --muted:#9fb0d9; --accent:#6ea8fe; --line:#26345f; }
-    * { box-sizing: border-box; }
+    :root { --bg:#0b1020; --panel:#121a31; --text:#e7ecff; --muted:#9fb0d9; --line:#26345f; }
+    * { box-sizing:border-box; }
     body { margin:0; font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:var(--bg); color:var(--text); }
     .layout { display:grid; grid-template-columns: 300px 1fr; min-height:100vh; }
     .sidebar { position:sticky; top:0; height:100vh; overflow:auto; border-right:1px solid var(--line); background:linear-gradient(180deg,#101935,#0b1020); padding:20px 16px; }
-    .brand { font-size:20px; font-weight:700; margin-bottom:6px; }
-    .meta { color:var(--muted); font-size:13px; margin-bottom:16px; }
-    .nav h3 { font-size:13px; color:var(--muted); margin:18px 0 8px; text-transform: uppercase; letter-spacing:.06em; }
-    .nav a { display:block; color:#cfe0ff; text-decoration:none; padding:8px 10px; border-radius:8px; margin-bottom:4px; border:1px solid transparent; }
-    .nav a:hover { background:#172349; border-color:#2f427a; }
     .main { padding:24px; max-width:1100px; }
-    .hero { background:linear-gradient(135deg,#16254d,#101a36); border:1px solid var(--line); border-radius:14px; padding:18px; margin-bottom:16px; }
-    .hero h1 { margin:0 0 8px; font-size:28px; }
-    .toolbar { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 12px; }
-    .chip { border:1px solid #2f427a; background:#111d3d; color:#cfe0ff; border-radius:999px; padding:6px 10px; cursor:pointer; font-size:13px; }
-    .chip.active { background:#22366f; border-color:#5c83ff; }
-    .toggle { display:flex; align-items:center; gap:6px; color:#cfe0ff; font-size:13px; }
-    .grid { display:grid; gap:12px; }
-    .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; }
+    .brand { font-size:20px; font-weight:700; }
+    .meta { color:var(--muted); font-size:13px; margin-top:8px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; margin-bottom:12px; }
     .repo-title { color:#dcebff; text-decoration:none; font-size:18px; font-weight:700; }
-    .repo-title:hover { color:#9ec5ff; }
-    .repo-meta { color:var(--muted); font-size:13px; margin:6px 0; }
-    .repo-desc { color:#d5e0ff; margin:8px 0; }
-    .tags { margin:6px 0; display:flex; gap:6px; flex-wrap:wrap; }
+    .repo-meta, .repo-desc { color:var(--muted); margin-top:6px; }
+    .repo-action { color:#b7ccff; background:#111d3d; border-left:3px solid #6ea8fe; padding:8px 10px; border-radius:8px; margin-top:8px; }
+    .chip { border:1px solid #2f427a; background:#111d3d; color:#cfe0ff; border-radius:999px; padding:6px 10px; cursor:pointer; font-size:13px; margin-right:6px; }
+    .chip.active { background:#22366f; border-color:#5c83ff; }
+    .tags { margin-top:6px; display:flex; gap:6px; flex-wrap:wrap; }
     .tag { font-size:12px; color:#9fc1ff; border:1px solid #375091; padding:2px 8px; border-radius:999px; }
-    .repo-action { color:#b7ccff; background:#111d3d; border-left:3px solid var(--accent); padding:8px 10px; border-radius:8px; font-size:14px; }
-    .section-title { margin:18px 0 10px; font-size:18px; }
-    ul { margin:8px 0 0 18px; }
-    @media (max-width: 900px) {
-      .layout { grid-template-columns: 1fr; }
-      .sidebar { position:relative; height:auto; border-right:none; border-bottom:1px solid var(--line); }
-      .main { padding:14px; }
-    }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .sidebar { position:relative; height:auto; border-right:none; border-bottom:1px solid var(--line);} .main{padding:14px;} }
   </style>
 </head>
 <body>
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="brand">Agent Tech Daily</div>
-      <div class="meta">日期：2026-03-07<br/>更新：2026-03-07T10:51:30.955Z</div>
-      <nav class="nav">
-        <h3>导航</h3>
-        <a href="#latest">最新技术文章</a>
-        <a href="#lead">技术负责人视角</a>
-        <a href="#history">历史归档</a>
-        <h3>今日 Top 10</h3>
-        <a href="#item-1">1. browser-use/browser-use</a><a href="#item-2">2. OpenBB-finance/OpenBB</a><a href="#item-3">3. ComposioHQ/composio</a><a href="#item-4">4. google/adk-python</a><a href="#item-5">5. emcie-co/parlant</a><a href="#item-6">6. Shubhamsaboo/awesome-llm-apps</a><a href="#item-7">7. MemoriLabs/Memori</a><a href="#item-8">8. e2b-dev/E2B</a><a href="#item-9">9. microsoft/agent-framework</a><a href="#item-10">10. MemMachine/MemMachine</a>
-      </nav>
-    </aside>
-    <main class="main">
-      <section class="hero">
-        <h1>大模型智能体技术日报</h1>
-        <div class="meta">每天自动聚合 GitHub 最新 Agent 技术动态，附可执行动作建议。</div>
-      </section>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">Agent Tech Daily</div>
+    <div class="meta">日期：2026-03-07<br/>更新：2026-03-07T12:47:01.274Z<br/>来源：GitHub / Reddit</div>
+  </aside>
+  <main class="main">
+    <section class="card">
+      <h1 style="margin:0 0 8px;">多源智能体技术日报</h1>
+      <div class="meta">不只 GitHub，自动聚合 Hacker News / Reddit / arXiv 热点。</div>
+      <div style="margin-top:10px;"><button class="chip active" data-source="ALL">ALL</button><button class="chip " data-source="GitHub">GitHub</button><button class="chip " data-source="Reddit">Reddit</button></div>
+    </section>
 
-      <section id="latest">
-        <h2 class="section-title">最新技术文章（Top 10）</h2>
-        <div class="toolbar">
-          <button class="chip active" data-tag="ALL">全部</button>
-          <button class="chip" data-tag="MCP">MCP</button>
-          <button class="chip" data-tag="RAG">RAG</button>
-          <button class="chip" data-tag="Eval">Eval</button>
-          <button class="chip" data-tag="Observability">Observability</button>
-          <label class="toggle"><input type="checkbox" id="todayOnly" /> 仅看今日新增</label>
-        </div>
-        <div class="grid" id="repoGrid">
-          
-          <article class="card repo-item" id="item-1" data-tags="General" data-today="0">
-            <a class="repo-title" href="https://github.com/browser-use/browser-use" target="_blank" rel="noreferrer">1. browser-use/browser-use</a>
-            <div class="repo-meta">⭐ 79825 · Python · 最近更新 2026-03-06</div>
-            <div class="tags"><span class="tag">General</span></div>
-            <div class="repo-desc">🌐 Make websites accessible for AI agents. Automate tasks online with ease.</div>
-            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
-          </article>
-          <article class="card repo-item" id="item-2" data-tags="General" data-today="1">
-            <a class="repo-title" href="https://github.com/OpenBB-finance/OpenBB" target="_blank" rel="noreferrer">2. OpenBB-finance/OpenBB</a>
-            <div class="repo-meta">⭐ 62658 · Python · 最近更新 2026-03-07</div>
-            <div class="tags"><span class="tag">General</span></div>
-            <div class="repo-desc">Financial data platform for analysts, quants and AI agents.</div>
-            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
-          </article>
-          <article class="card repo-item" id="item-3" data-tags="General" data-today="1">
-            <a class="repo-title" href="https://github.com/ComposioHQ/composio" target="_blank" rel="noreferrer">3. ComposioHQ/composio</a>
-            <div class="repo-meta">⭐ 27309 · TypeScript · 最近更新 2026-03-07</div>
-            <div class="tags"><span class="tag">General</span></div>
-            <div class="repo-desc">Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.</div>
-            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
-          </article>
-          <article class="card repo-item" id="item-4" data-tags="Eval" data-today="1">
-            <a class="repo-title" href="https://github.com/google/adk-python" target="_blank" rel="noreferrer">4. google/adk-python</a>
-            <div class="repo-meta">⭐ 18213 · Python · 最近更新 2026-03-07</div>
-            <div class="tags"><span class="tag">Eval</span></div>
-            <div class="repo-desc">An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</div>
-            <div class="repo-action">动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。</div>
-          </article>
-          <article class="card repo-item" id="item-5" data-tags="General" data-today="0">
-            <a class="repo-title" href="https://github.com/emcie-co/parlant" target="_blank" rel="noreferrer">5. emcie-co/parlant</a>
-            <div class="repo-meta">⭐ 17808 · Python · 最近更新 2026-03-06</div>
-            <div class="tags"><span class="tag">General</span></div>
-            <div class="repo-desc">The conversational control layer for customer-facing AI agents - Parlant is a context-engineering framework optimized for controlling customer interactions.</div>
-            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
-          </article>
-          <article class="card repo-item" id="item-6" data-tags="RAG" data-today="0">
-            <a class="repo-title" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noreferrer">6. Shubhamsaboo/awesome-llm-apps</a>
-            <div class="repo-meta">⭐ 100205 · Python · 最近更新 2026-03-02</div>
-            <div class="tags"><span class="tag">RAG</span></div>
-            <div class="repo-desc">Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.</div>
-            <div class="repo-action">动作：用一组真实业务问答做RAG召回对比（命中率/延迟/成本）。</div>
-          </article>
-          <article class="card repo-item" id="item-7" data-tags="General" data-today="1">
-            <a class="repo-title" href="https://github.com/MemoriLabs/Memori" target="_blank" rel="noreferrer">7. MemoriLabs/Memori</a>
-            <div class="repo-meta">⭐ 12316 · Python · 最近更新 2026-03-07</div>
-            <div class="tags"><span class="tag">General</span></div>
-            <div class="repo-desc">SQL Native Memory Layer for LLMs, AI Agents & Multi-Agent Systems</div>
-            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
-          </article>
-          <article class="card repo-item" id="item-8" data-tags="General" data-today="0">
-            <a class="repo-title" href="https://github.com/e2b-dev/E2B" target="_blank" rel="noreferrer">8. e2b-dev/E2B</a>
-            <div class="repo-meta">⭐ 11164 · MDX · 最近更新 2026-03-06</div>
-            <div class="tags"><span class="tag">General</span></div>
-            <div class="repo-desc">Open-source, secure environment with real-world tools for enterprise-grade agents.</div>
-            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
-          </article>
-          <article class="card repo-item" id="item-9" data-tags="General" data-today="1">
-            <a class="repo-title" href="https://github.com/microsoft/agent-framework" target="_blank" rel="noreferrer">9. microsoft/agent-framework</a>
-            <div class="repo-meta">⭐ 7716 · Python · 最近更新 2026-03-07</div>
-            <div class="tags"><span class="tag">General</span></div>
-            <div class="repo-desc">A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET.</div>
-            <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
-          </article>
-          <article class="card repo-item" id="item-10" data-tags="RAG,Eval" data-today="0">
-            <a class="repo-title" href="https://github.com/MemMachine/MemMachine" target="_blank" rel="noreferrer">10. MemMachine/MemMachine</a>
-            <div class="repo-meta">⭐ 4612 · Python · 最近更新 2026-03-06</div>
-            <div class="tags"><span class="tag">RAG</span><span class="tag">Eval</span></div>
-            <div class="repo-desc">Universal memory layer for AI Agents. It provides scalable, extensible, and interoperable memory storage and retrieval to streamline AI agent state management for next-generation autonomous systems.</div>
-            <div class="repo-action">动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。</div>
-          </article>
-        </div>
-      </section>
+    <section id="latest">
+      
+    <article class="card repo-item" id="item-1" data-tags="MCP,Persona" data-source="GitHub">
+      <a class="repo-title" href="https://github.com/doobidoo/mcp-memory-service" target="_blank" rel="noreferrer">1. doobidoo/mcp-memory-service</a>
+      <div class="repo-meta">来源 GitHub · 热度 ⭐ 1464 · 时间 2026-03-07</div>
+      <div class="tags"><span class="tag">MCP</span><span class="tag">Persona</span></div>
+      <div class="repo-desc">Open-source persistent memory for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude. REST API + knowledge graph + autonomous consolidation.</div>
+      <div class="repo-action">动作：把1个高频内部工具封装成MCP，先灰度给小团队。</div>
+    </article>
+  
 
-      <section id="lead" class="card" style="margin-top:16px;">
-        <h2 class="section-title" style="margin-top:0;">技术负责人视角（本日Top3落地建议）</h2>
-        <ul><li><b>1. browser-use/browser-use</b>：本周安排一个 0.5~1 天的小试点，验证“可观测/可评测/可回滚”。</li>
-<li><b>2. OpenBB-finance/OpenBB</b>：本周安排一个 0.5~1 天的小试点，验证“可观测/可评测/可回滚”。</li>
-<li><b>3. ComposioHQ/composio</b>：本周安排一个 0.5~1 天的小试点，验证“可观测/可评测/可回滚”。</li></ul>
-      </section>
+    <article class="card repo-item" id="item-2" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://www.reddit.com/gallery/1rmplvs" target="_blank" rel="noreferrer">2. Open WebUI’s New Open Terminal + “Native” Tool Calling + Qwen3.5 35b = Holy Sh!t!!!</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 682 💬153 · 时间 2026-03-06</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc">Let me pre-apologize for this long and rambling post but I get excited by stuff like this. 
 
-      <section id="history" style="margin-top:16px;" class="card">
-        <h2 class="section-title" style="margin-top:0;">历史归档</h2>
-        <ul><li><a href="../memory/agent-tech-daily/2026-03-07.md">2026-03-07</a></li></ul>
-      </section>
-    </main>
-  </div>
-  <script>
-    (() => {
-      const chips = [...document.querySelectorAll('.chip')];
-      const items = [...document.querySelectorAll('.repo-item')];
-      const todayOnly = document.getElementById('todayOnly');
-      let activeTag = 'ALL';
-      function apply() {
-        const onlyToday = !!todayOnly.checked;
-        items.forEach(el => {
-          const tags = (el.dataset.tags || '').split(',').filter(Boolean);
-          const okTag = activeTag === 'ALL' || tags.includes(activeTag);
-          const okToday = !onlyToday || el.dataset.today === '1';
-          el.style.display = okTag && okToday ? '' : 'none';
-        });
-      }
-      chips.forEach(ch => ch.addEventListener('click', () => {
-        chips.forEach(x => x.classList.remove('active'));
-        ch.classList.add('active');
-        activeTag = ch.dataset.tag;
-        apply();
-      }));
-      todayOnly.addEventListener('change', apply);
-      apply();
-    })();
-  </script>
+I think a lot of folks here (myself included) have been largely oblivious to what Tim &amp; company over at Open WebUI has been up to lately with their repo.  I know I’ve been too busy tr</div>
+      <div class="repo-action">动作：在你现有平台挑1个生产任务做A/B替换，对比效率、质量、成本后再推广。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-3" data-tags="General" data-source="GitHub">
+      <a class="repo-title" href="https://github.com/sinanuozdemir/oreilly-ai-agents" target="_blank" rel="noreferrer">3. sinanuozdemir/oreilly-ai-agents</a>
+      <div class="repo-meta">来源 GitHub · 热度 ⭐ 256 · 时间 2026-03-06</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc">An introduction to the world of AI Agents</div>
+      <div class="repo-action">动作：在你现有平台挑1个生产任务做A/B替换，对比效率、质量、成本后再推广。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-4" data-tags="MCP,Eval" data-source="GitHub">
+      <a class="repo-title" href="https://github.com/hidai25/eval-view" target="_blank" rel="noreferrer">4. hidai25/eval-view</a>
+      <div class="repo-meta">来源 GitHub · 热度 ⭐ 50 · 时间 2026-03-07</div>
+      <div class="tags"><span class="tag">MCP</span><span class="tag">Eval</span></div>
+      <div class="repo-desc">Proof your AI agent still works. Regression testing with golden baselines, tool-call diffing, and output drift detection. MCP server + Claude Code skills. LangGraph, CrewAI, Anthropic, OpenAI.</div>
+      <div class="repo-action">动作：挑1个真实任务补评测基线，加入每周回归对比。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-5" data-tags="MCP,RAG" data-source="GitHub">
+      <a class="repo-title" href="https://github.com/MDalamin5/End-to-End-Agentic-Ai-Automation-Lab" target="_blank" rel="noreferrer">5. MDalamin5/End-to-End-Agentic-Ai-Automation-Lab</a>
+      <div class="repo-meta">来源 GitHub · 热度 ⭐ 50 · 时间 2026-03-06</div>
+      <div class="tags"><span class="tag">MCP</span><span class="tag">RAG</span></div>
+      <div class="repo-desc">This repository contains hands-on projects, code examples, and deployment workflows. Explore multi-agent systems, LangChain, LangGraph, AutoGen, CrewAI, RAG, MCP, automation with n8n, and scalable agent deployment using Docker, AWS, and BentoML.</div>
+      <div class="repo-action">动作：用同一批问题做召回率/时延/成本三指标对比。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-6" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://www.sarvam.ai/blogs/sarvam-30b-105b" target="_blank" rel="noreferrer">6. New OpenSource Models Available—Sarvam 30B and 105B trained from scratch by an Indian based company</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 376 💬39 · 时间 2026-03-06</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc"></div>
+      <div class="repo-action">动作：在你现有平台挑1个生产任务做A/B替换，对比效率、质量、成本后再推广。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-7" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rmn4gx/finally_bought_an_rtx_6000_maxq_pros_cons_notes/" target="_blank" rel="noreferrer">7. Finally bought an RTX 6000 Max-Q: Pros, cons, notes and ramblings</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 154 💬120 · 时间 2026-03-06</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc">**Transparency:** I used an LLM to help figure out a good title and write the TLDR, but the post content is otherwise 100% written by me with zero help from an LLM.
+
+# Background
+
+I recently asked Reddit to [talk me out of buying an RTX Pro 6000](https://www.reddit.com/r/LocalLLa</div>
+      <div class="repo-action">动作：在你现有平台挑1个生产任务做A/B替换，对比效率、质量、成本后再推广。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-8" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rmp3ep/llamacpp_now_with_automatic_parser_generator/" target="_blank" rel="noreferrer">8. Llama.cpp: now with automatic parser generator</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 320 💬40 · 时间 2026-03-06</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc">I am happy to report that after months of testing, feedback, reviews and refactorings, the autoparser solution has been merged into the mainline llama.cpp code.
+
+This solution follows the big changes we've done to our templating and parsing code: ngxson's new Jinja system which i</div>
+      <div class="repo-action">动作：在你现有平台挑1个生产任务做A/B替换，对比效率、质量、成本后再推广。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-9" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rmwov8/how_many_of_you_have_seriously_started_using_ai/" target="_blank" rel="noreferrer">9. How many of you have seriously started using AI agents in your workplace or day to day life?</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 61 💬104 · 时间 2026-03-07</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc">What agents do you use and how has it impacted your work?
+
+Curious how people in different industries are adopting AI agents, and to what scale. 
+
+If you build your own agents from scratch, feel free to dorp your techstack or bare metal pipeline!
+
+</div>
+      <div class="repo-action">动作：在你现有平台挑1个生产任务做A/B替换，对比效率、质量、成本后再推广。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-10" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://reddit.com/r/MachineLearning/comments/1rmk49w/r_loweffort_papers/" target="_blank" rel="noreferrer">10. [R] Low-effort papers</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 194 💬54 · 时间 2026-03-06</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc">I came across a professor with 100+ published papers, and the pattern is striking. Almost every paper follows the same formula: take a new YOLO version (v8, v9, v10, v11...), train it on a public dataset from Roboflow, report results, and publish. Repeat for every new YOLO releas</div>
+      <div class="repo-action">动作：在你现有平台挑1个生产任务做A/B替换，对比效率、质量、成本后再推广。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-11" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://huggingface.co/sarvamai/sarvam-105b" target="_blank" rel="noreferrer">11. sarvamai/sarvam-105b · Hugging Face</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 142 💬26 · 时间 2026-03-06</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc">Not too bad for a first effort built from the ground-up
+
+[https://www.sarvam.ai/blogs/sarvam-30b-105b](https://www.sarvam.ai/blogs/sarvam-30b-105b)</div>
+      <div class="repo-action">动作：在你现有平台挑1个生产任务做A/B替换，对比效率、质量、成本后再推广。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-12" data-tags="MCP,RAG,Persona" data-source="GitHub">
+      <a class="repo-title" href="https://github.com/hoangsonww/EstateWise-Chapel-Hill-Chatbot" target="_blank" rel="noreferrer">12. hoangsonww/EstateWise-Chapel-Hill-Chatbot</a>
+      <div class="repo-meta">来源 GitHub · 热度 ⭐ 23 · 时间 2026-03-07</div>
+      <div class="tags"><span class="tag">MCP</span><span class="tag">RAG</span><span class="tag">Persona</span></div>
+      <div class="repo-desc">🏠 An AI real estate app featuring secure auth, conversation management, & personalized property recommendations. Powered by Agentic AI, RAG (w/ Pinecone), GraphRAG (w/ Neo4j), MCP, kNN, K‑Means Clustering, CoT, LangGraph, and a Mixture‑of‑Experts ensemble to deliver accurate, effective, and scalable AI insights. Also features a VS Code extension!</div>
+      <div class="repo-action">动作：用同一批问题做召回率/时延/成本三指标对比。</div>
+    </article>
+  
+    </section>
+
+    <section class="card">
+      <h2 style="margin-top:0;">技术负责人视角（本日Top3落地建议）</h2>
+      <ul><li><b>1. doobidoo/mcp-memory-service</b>（GitHub）：本周安排 0.5~1 天验证并纳入周报追踪。</li>
+<li><b>2. Open WebUI’s New Open Terminal + “Native” Tool Calling + Qwen3.5 35b = Holy Sh!t!!!</b>（Reddit）：本周安排 0.5~1 天验证并纳入周报追踪。</li>
+<li><b>3. sinanuozdemir/oreilly-ai-agents</b>（GitHub）：本周安排 0.5~1 天验证并纳入周报追踪。</li></ul>
+    </section>
+
+    <section class="card">
+      <h2 style="margin-top:0;">历史归档</h2>
+      <ul><li><a href="../memory/agent-tech-daily/2026-03-07.md">2026-03-07</a></li></ul>
+    </section>
+  </main>
+</div>
+<script>
+(() => {
+  const chips = [...document.querySelectorAll('.chip')];
+  const items = [...document.querySelectorAll('.repo-item')];
+  let source = 'ALL';
+  function apply() {
+    items.forEach(el => {
+      const ok = source === 'ALL' || el.dataset.source === source;
+      el.style.display = ok ? '' : 'none';
+    });
+  }
+  chips.forEach(ch => ch.addEventListener('click', () => {
+    chips.forEach(c => c.classList.remove('active'));
+    ch.classList.add('active');
+    source = ch.dataset.source;
+    apply();
+  }));
+})();
+</script>
 </body>
 </html>
