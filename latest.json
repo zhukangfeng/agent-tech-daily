@@ -1,0 +1,117 @@
+{
+  "date": "2026-03-07",
+  "generated_at": "2026-03-07T10:17:15.009Z",
+  "source": "GitHub Search API",
+  "items": [
+    {
+      "id": 881458615,
+      "name": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use",
+      "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+      "stars": 79822,
+      "language": "Python",
+      "pushed_at": "2026-03-06T16:53:25Z",
+      "score": 100.53,
+      "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
+    },
+    {
+      "id": 323048702,
+      "name": "OpenBB-finance/OpenBB",
+      "url": "https://github.com/OpenBB-finance/OpenBB",
+      "description": "Financial data platform for analysts, quants and AI agents.",
+      "stars": 62657,
+      "language": "Python",
+      "pushed_at": "2026-03-07T05:07:32Z",
+      "score": 98.95,
+      "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
+    },
+    {
+      "id": 762304524,
+      "name": "ComposioHQ/composio",
+      "url": "https://github.com/ComposioHQ/composio",
+      "description": "Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.",
+      "stars": 27309,
+      "language": "TypeScript",
+      "pushed_at": "2026-03-07T10:02:31Z",
+      "score": 93.54,
+      "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
+    },
+    {
+      "id": 958830659,
+      "name": "google/adk-python",
+      "url": "https://github.com/google/adk-python",
+      "description": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "stars": 18212,
+      "language": "Python",
+      "pushed_at": "2026-03-07T06:11:10Z",
+      "score": 92.91,
+      "action": "动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。"
+    },
+    {
+      "id": 758197374,
+      "name": "emcie-co/parlant",
+      "url": "https://github.com/emcie-co/parlant",
+      "description": "The conversational control layer for customer-facing AI agents - Parlant is a context-engineering framework optimized for controlling customer interactions.",
+      "stars": 17808,
+      "language": "Python",
+      "pushed_at": "2026-03-06T18:15:15Z",
+      "score": 90.76,
+      "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
+    },
+    {
+      "id": 793375104,
+      "name": "Shubhamsaboo/awesome-llm-apps",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "description": "Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.",
+      "stars": 100199,
+      "language": "Python",
+      "pushed_at": "2026-03-02T07:16:17Z",
+      "score": 89.01,
+      "action": "动作：用一组真实业务问答做RAG召回对比（命中率/延迟/成本）。"
+    },
+    {
+      "id": 1025381911,
+      "name": "MemoriLabs/Memori",
+      "url": "https://github.com/MemoriLabs/Memori",
+      "description": "SQL Native Memory Layer for LLMs, AI Agents & Multi-Agent Systems",
+      "stars": 12316,
+      "language": "Python",
+      "pushed_at": "2026-03-07T00:20:00Z",
+      "score": 88.36,
+      "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
+    },
+    {
+      "id": 609539715,
+      "name": "e2b-dev/E2B",
+      "url": "https://github.com/e2b-dev/E2B",
+      "description": "Open-source, secure environment with real-world tools for enterprise-grade agents.",
+      "stars": 11164,
+      "language": "MDX",
+      "pushed_at": "2026-03-06T22:40:35Z",
+      "score": 87.72,
+      "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
+    },
+    {
+      "id": 974445592,
+      "name": "microsoft/agent-framework",
+      "url": "https://github.com/microsoft/agent-framework",
+      "description": "A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET.",
+      "stars": 7715,
+      "language": "Python",
+      "pushed_at": "2026-03-07T04:08:49Z",
+      "score": 87.31,
+      "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
+    },
+    {
+      "id": 1038686658,
+      "name": "MemMachine/MemMachine",
+      "url": "https://github.com/MemMachine/MemMachine",
+      "description": "Universal memory layer for AI Agents. It provides scalable, extensible, and interoperable memory storage and retrieval to streamline AI agent state management for next-generation autonomous systems.",
+      "stars": 4611,
+      "language": "Python",
+      "pushed_at": "2026-03-06T23:53:42Z",
+      "score": 85.96,
+      "action": "动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。"
+    }
+  ]
+}
