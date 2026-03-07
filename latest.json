@@ -1,6 +1,6 @@
 {
   "date": "2026-03-07",
-  "generated_at": "2026-03-07T10:49:07.577Z",
+  "generated_at": "2026-03-07T10:51:30.955Z",
   "source": "GitHub Search API",
   "items": [
     {
@@ -12,6 +12,9 @@
       "language": "Python",
       "pushed_at": "2026-03-06T16:53:25Z",
       "score": 100.53,
+      "tags": [
+        "General"
+      ],
       "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
     },
     {
@@ -23,6 +26,9 @@
       "language": "Python",
       "pushed_at": "2026-03-07T05:07:32Z",
       "score": 98.95,
+      "tags": [
+        "General"
+      ],
       "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
     },
     {
@@ -34,6 +40,9 @@
       "language": "TypeScript",
       "pushed_at": "2026-03-07T10:02:31Z",
       "score": 93.54,
+      "tags": [
+        "General"
+      ],
       "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
     },
     {
@@ -45,6 +54,9 @@
       "language": "Python",
       "pushed_at": "2026-03-07T06:11:10Z",
       "score": 92.91,
+      "tags": [
+        "Eval"
+      ],
       "action": "动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。"
     },
     {
@@ -56,6 +68,9 @@
       "language": "Python",
       "pushed_at": "2026-03-06T18:15:15Z",
       "score": 90.76,
+      "tags": [
+        "General"
+      ],
       "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
     },
     {
@@ -67,6 +82,9 @@
       "language": "Python",
       "pushed_at": "2026-03-02T07:16:17Z",
       "score": 89.01,
+      "tags": [
+        "RAG"
+      ],
       "action": "动作：用一组真实业务问答做RAG召回对比（命中率/延迟/成本）。"
     },
     {
@@ -78,6 +96,9 @@
       "language": "Python",
       "pushed_at": "2026-03-07T00:20:00Z",
       "score": 88.36,
+      "tags": [
+        "General"
+      ],
       "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
     },
     {
@@ -89,6 +110,9 @@
       "language": "MDX",
       "pushed_at": "2026-03-06T22:40:35Z",
       "score": 87.72,
+      "tags": [
+        "General"
+      ],
       "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
     },
     {
@@ -100,6 +124,9 @@
       "language": "Python",
       "pushed_at": "2026-03-07T04:08:49Z",
       "score": 87.31,
+      "tags": [
+        "General"
+      ],
       "action": "动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。"
     },
     {
@@ -111,6 +138,10 @@
       "language": "Python",
       "pushed_at": "2026-03-06T23:53:42Z",
       "score": 85.96,
+      "tags": [
+        "RAG",
+        "Eval"
+      ],
       "action": "动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。"
     }
   ]

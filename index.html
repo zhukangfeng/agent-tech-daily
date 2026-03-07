@@ -18,12 +18,18 @@
     .main { padding:24px; max-width:1100px; }
     .hero { background:linear-gradient(135deg,#16254d,#101a36); border:1px solid var(--line); border-radius:14px; padding:18px; margin-bottom:16px; }
     .hero h1 { margin:0 0 8px; font-size:28px; }
+    .toolbar { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 12px; }
+    .chip { border:1px solid #2f427a; background:#111d3d; color:#cfe0ff; border-radius:999px; padding:6px 10px; cursor:pointer; font-size:13px; }
+    .chip.active { background:#22366f; border-color:#5c83ff; }
+    .toggle { display:flex; align-items:center; gap:6px; color:#cfe0ff; font-size:13px; }
     .grid { display:grid; gap:12px; }
     .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; }
     .repo-title { color:#dcebff; text-decoration:none; font-size:18px; font-weight:700; }
     .repo-title:hover { color:#9ec5ff; }
     .repo-meta { color:var(--muted); font-size:13px; margin:6px 0; }
     .repo-desc { color:#d5e0ff; margin:8px 0; }
+    .tags { margin:6px 0; display:flex; gap:6px; flex-wrap:wrap; }
+    .tag { font-size:12px; color:#9fc1ff; border:1px solid #375091; padding:2px 8px; border-radius:999px; }
     .repo-action { color:#b7ccff; background:#111d3d; border-left:3px solid var(--accent); padding:8px 10px; border-radius:8px; font-size:14px; }
     .section-title { margin:18px 0 10px; font-size:18px; }
     ul { margin:8px 0 0 18px; }
@@ -38,7 +44,7 @@
   <div class="layout">
     <aside class="sidebar">
       <div class="brand">Agent Tech Daily</div>
-      <div class="meta">日期：2026-03-07<br/>更新：2026-03-07T10:49:07.577Z</div>
+      <div class="meta">日期：2026-03-07<br/>更新：2026-03-07T10:51:30.955Z</div>
       <nav class="nav">
         <h3>导航</h3>
         <a href="#latest">最新技术文章</a>
@@ -56,65 +62,83 @@
 
       <section id="latest">
         <h2 class="section-title">最新技术文章（Top 10）</h2>
-        <div class="grid">
+        <div class="toolbar">
+          <button class="chip active" data-tag="ALL">全部</button>
+          <button class="chip" data-tag="MCP">MCP</button>
+          <button class="chip" data-tag="RAG">RAG</button>
+          <button class="chip" data-tag="Eval">Eval</button>
+          <button class="chip" data-tag="Observability">Observability</button>
+          <label class="toggle"><input type="checkbox" id="todayOnly" /> 仅看今日新增</label>
+        </div>
+        <div class="grid" id="repoGrid">
           
-          <article class="card" id="item-1">
+          <article class="card repo-item" id="item-1" data-tags="General" data-today="0">
             <a class="repo-title" href="https://github.com/browser-use/browser-use" target="_blank" rel="noreferrer">1. browser-use/browser-use</a>
             <div class="repo-meta">⭐ 79825 · Python · 最近更新 2026-03-06</div>
+            <div class="tags"><span class="tag">General</span></div>
             <div class="repo-desc">🌐 Make websites accessible for AI agents. Automate tasks online with ease.</div>
             <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
           </article>
-          <article class="card" id="item-2">
+          <article class="card repo-item" id="item-2" data-tags="General" data-today="1">
             <a class="repo-title" href="https://github.com/OpenBB-finance/OpenBB" target="_blank" rel="noreferrer">2. OpenBB-finance/OpenBB</a>
             <div class="repo-meta">⭐ 62658 · Python · 最近更新 2026-03-07</div>
+            <div class="tags"><span class="tag">General</span></div>
             <div class="repo-desc">Financial data platform for analysts, quants and AI agents.</div>
             <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
           </article>
-          <article class="card" id="item-3">
+          <article class="card repo-item" id="item-3" data-tags="General" data-today="1">
             <a class="repo-title" href="https://github.com/ComposioHQ/composio" target="_blank" rel="noreferrer">3. ComposioHQ/composio</a>
             <div class="repo-meta">⭐ 27309 · TypeScript · 最近更新 2026-03-07</div>
+            <div class="tags"><span class="tag">General</span></div>
             <div class="repo-desc">Composio powers 1000+ toolkits, tool search, context management, authentication, and a sandboxed workbench to help you build AI agents that turn intent into action.</div>
             <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
           </article>
-          <article class="card" id="item-4">
+          <article class="card repo-item" id="item-4" data-tags="Eval" data-today="1">
             <a class="repo-title" href="https://github.com/google/adk-python" target="_blank" rel="noreferrer">4. google/adk-python</a>
             <div class="repo-meta">⭐ 18213 · Python · 最近更新 2026-03-07</div>
+            <div class="tags"><span class="tag">Eval</span></div>
             <div class="repo-desc">An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.</div>
             <div class="repo-action">动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。</div>
           </article>
-          <article class="card" id="item-5">
+          <article class="card repo-item" id="item-5" data-tags="General" data-today="0">
             <a class="repo-title" href="https://github.com/emcie-co/parlant" target="_blank" rel="noreferrer">5. emcie-co/parlant</a>
             <div class="repo-meta">⭐ 17808 · Python · 最近更新 2026-03-06</div>
+            <div class="tags"><span class="tag">General</span></div>
             <div class="repo-desc">The conversational control layer for customer-facing AI agents - Parlant is a context-engineering framework optimized for controlling customer interactions.</div>
             <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
           </article>
-          <article class="card" id="item-6">
+          <article class="card repo-item" id="item-6" data-tags="RAG" data-today="0">
             <a class="repo-title" href="https://github.com/Shubhamsaboo/awesome-llm-apps" target="_blank" rel="noreferrer">6. Shubhamsaboo/awesome-llm-apps</a>
             <div class="repo-meta">⭐ 100205 · Python · 最近更新 2026-03-02</div>
+            <div class="tags"><span class="tag">RAG</span></div>
             <div class="repo-desc">Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.</div>
             <div class="repo-action">动作：用一组真实业务问答做RAG召回对比（命中率/延迟/成本）。</div>
           </article>
-          <article class="card" id="item-7">
+          <article class="card repo-item" id="item-7" data-tags="General" data-today="1">
             <a class="repo-title" href="https://github.com/MemoriLabs/Memori" target="_blank" rel="noreferrer">7. MemoriLabs/Memori</a>
             <div class="repo-meta">⭐ 12316 · Python · 最近更新 2026-03-07</div>
+            <div class="tags"><span class="tag">General</span></div>
             <div class="repo-desc">SQL Native Memory Layer for LLMs, AI Agents & Multi-Agent Systems</div>
             <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
           </article>
-          <article class="card" id="item-8">
+          <article class="card repo-item" id="item-8" data-tags="General" data-today="0">
             <a class="repo-title" href="https://github.com/e2b-dev/E2B" target="_blank" rel="noreferrer">8. e2b-dev/E2B</a>
             <div class="repo-meta">⭐ 11164 · MDX · 最近更新 2026-03-06</div>
+            <div class="tags"><span class="tag">General</span></div>
             <div class="repo-desc">Open-source, secure environment with real-world tools for enterprise-grade agents.</div>
             <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
           </article>
-          <article class="card" id="item-9">
+          <article class="card repo-item" id="item-9" data-tags="General" data-today="1">
             <a class="repo-title" href="https://github.com/microsoft/agent-framework" target="_blank" rel="noreferrer">9. microsoft/agent-framework</a>
             <div class="repo-meta">⭐ 7716 · Python · 最近更新 2026-03-07</div>
+            <div class="tags"><span class="tag">General</span></div>
             <div class="repo-desc">A framework for building, orchestrating and deploying AI agents and multi-agent workflows with support for Python and .NET.</div>
             <div class="repo-action">动作：今天先跑通最小Demo，并记录“能解决的具体场景 + 不足”。</div>
           </article>
-          <article class="card" id="item-10">
+          <article class="card repo-item" id="item-10" data-tags="RAG,Eval" data-today="0">
             <a class="repo-title" href="https://github.com/MemMachine/MemMachine" target="_blank" rel="noreferrer">10. MemMachine/MemMachine</a>
             <div class="repo-meta">⭐ 4612 · Python · 最近更新 2026-03-06</div>
+            <div class="tags"><span class="tag">RAG</span><span class="tag">Eval</span></div>
             <div class="repo-desc">Universal memory layer for AI Agents. It provides scalable, extensible, and interoperable memory storage and retrieval to streamline AI agent state management for next-generation autonomous systems.</div>
             <div class="repo-action">动作：拿你们现有一个Agent任务，补一条离线评测集并接入CI。</div>
           </article>
@@ -134,5 +158,30 @@
       </section>
     </main>
   </div>
+  <script>
+    (() => {
+      const chips = [...document.querySelectorAll('.chip')];
+      const items = [...document.querySelectorAll('.repo-item')];
+      const todayOnly = document.getElementById('todayOnly');
+      let activeTag = 'ALL';
+      function apply() {
+        const onlyToday = !!todayOnly.checked;
+        items.forEach(el => {
+          const tags = (el.dataset.tags || '').split(',').filter(Boolean);
+          const okTag = activeTag === 'ALL' || tags.includes(activeTag);
+          const okToday = !onlyToday || el.dataset.today === '1';
+          el.style.display = okTag && okToday ? '' : 'none';
+        });
+      }
+      chips.forEach(ch => ch.addEventListener('click', () => {
+        chips.forEach(x => x.classList.remove('active'));
+        ch.classList.add('active');
+        activeTag = ch.dataset.tag;
+        apply();
+      }));
+      todayOnly.addEventListener('change', apply);
+      apply();
+    })();
+  </script>
 </body>
 </html>
