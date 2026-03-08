@@ -1,80 +1,61 @@
 # 多源智能体技术日报 2026-03-08
 
-生成时间: 2026-03-08T08:00:32.448Z
-数据来源: GitHub / DEV.to / HackerNews
+生成时间: 2026-03-08T14:24:41.748Z
+数据来源: GitHub / HackerNews
 
 ## 今日建议先看（Top 12）
 
 ### 1. [doobidoo/mcp-memory-service](https://github.com/doobidoo/mcp-memory-service)
-- 来源: GitHub | 热度: ⭐ 1468 | 时间: 2026-03-08T07:43:27.000Z
+- 来源: GitHub | 热度: ⭐ 1472 | 时间: 2026-03-08T12:33:12.000Z
 - 简介: Open-source persistent memory for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude. REST API + knowledge graph + autonomous consolidation.
 - 概要：这篇内容围绕「doobidoo/mcp memory service」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；涉及记忆层与状态管理。文中提到“Open source persistent memory for AI agent”。信息更偏工程实现
 
 ### 2. [hidai25/eval-view](https://github.com/hidai25/eval-view)
-- 来源: GitHub | 热度: ⭐ 51 | 时间: 2026-03-07T22:39:30.000Z
+- 来源: GitHub | 热度: ⭐ 53 | 时间: 2026-03-07T22:39:30.000Z
 - 简介: Proof your AI agent still works. Regression testing with golden baselines, tool-call diffing, and output drift detection. MCP server + Claude Code skills. LangGraph, CrewAI, Anthropic, OpenAI.
 - 概要：这篇内容围绕「hidai25/eval view」展开，主要在讲：强调评测对比与稳定性验证；提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“Proof your AI agent still works. Regressio”。信息更偏工程实现与代码能力
 
-### 3. [sinanuozdemir/oreilly-ai-agents](https://github.com/sinanuozdemir/oreilly-ai-agents)
-- 来源: GitHub | 热度: ⭐ 256 | 时间: 2026-03-06T16:49:32.000Z
+### 3. [MDalamin5/End-to-End-Agentic-Ai-Automation-Lab](https://github.com/MDalamin5/End-to-End-Agentic-Ai-Automation-Lab)
+- 来源: GitHub | 热度: ⭐ 50 | 时间: 2026-03-08T09:32:23.000Z
+- 简介: This repository contains hands-on projects, code examples, and deployment workflows. Explore multi-agent systems, LangChain, LangGraph, AutoGen, CrewAI, RAG, MCP, automation with n8n, and scalable agent deployment using Docker, AWS, and BentoML.
+- 概要：这篇内容围绕「MDalamin5/End to End Agentic Ai Automation」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；支持多智能体编排与流程化落地。文中提到“This repository contains hands on
+
+### 4. [SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via CI](https://arxiv.org/abs/2603.03823)
+- 来源: HackerNews | 热度: ▲81 💬19 | 时间: 2026-03-08T08:11:50.000Z
+- 简介: （无）
+- 概要：这篇内容围绕「SWE CI: Evaluating Agent Capabilities in M」展开，主要在讲：强调评测对比与稳定性验证。文中提到“SWE CI: Evaluating Agent Capabilities in M”。信息更偏行业观点与趋势讨论。
+
+### 5. [sinanuozdemir/oreilly-ai-agents](https://github.com/sinanuozdemir/oreilly-ai-agents)
+- 来源: GitHub | 热度: ⭐ 258 | 时间: 2026-03-06T16:49:32.000Z
 - 简介: An introduction to the world of AI Agents
 - 概要：这篇内容围绕「sinanuozdemir/oreilly ai agents」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“An introduction to the world of AI Agents”。信息更偏工程实现与代码能力。
 
-### 4. [yaalalabs/agent-kernel](https://github.com/yaalalabs/agent-kernel)
+### 6. [yaalalabs/agent-kernel](https://github.com/yaalalabs/agent-kernel)
 - 来源: GitHub | 热度: ⭐ 24 | 时间: 2026-03-08T07:20:02.000Z
 - 简介: Multi-cloud, framwork-agnostic AI agent runtime for building, testing, and deploying production agents across OpenAI, CrewAI, LangGraph, and Google ADK. Deploy the same agent code to AWS or Azure with built-in session management, execution hooks, MCP/A2A support, guardrails, observability and fault tolerance.
 - 概要：这篇内容围绕「yaalalabs/agent kernel」展开，主要在讲：提供工具调用/系统集成能力；支持多智能体编排与流程化落地；突出可观测与质量追踪。文中提到“Multi cloud, framwork agnostic AI agent ru”。信息更偏工程实现与代
 
-### 5. [hoangsonww/EstateWise-Chapel-Hill-Chatbot](https://github.com/hoangsonww/EstateWise-Chapel-Hill-Chatbot)
+### 7. [hoangsonww/EstateWise-Chapel-Hill-Chatbot](https://github.com/hoangsonww/EstateWise-Chapel-Hill-Chatbot)
 - 来源: GitHub | 热度: ⭐ 23 | 时间: 2026-03-07T20:44:54.000Z
 - 简介: 🏠 An AI real estate app featuring secure auth, conversation management, & personalized property recommendations. Powered by Agentic AI, RAG (w/ Pinecone), GraphRAG (w/ Neo4j), MCP, kNN, K‑Means Clustering, CoT, LangGraph, and a Mixture‑of‑Experts ensemble to deliver accurate, effective, and scalable AI insights. Also features a VS Code extension!
 - 概要：这篇内容围绕「hoangsonww/EstateWise Chapel Hill Chatbot」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；涉及记忆层与状态管理。文中提到“🏠 An AI real estate app featuring sec
 
-### 6. [yonatangross/orchestkit](https://github.com/yonatangross/orchestkit)
-- 来源: GitHub | 热度: ⭐ 110 | 时间: 2026-03-08T07:49:26.000Z
+### 8. [yonatangross/orchestkit](https://github.com/yonatangross/orchestkit)
+- 来源: GitHub | 热度: ⭐ 110 | 时间: 2026-03-08T13:34:42.000Z
 - 简介: The Complete AI Development Toolkit for Claude Code — 79 skills, 30 agents, 105 hooks. Production-ready patterns for full-stack development.
 - 概要：这篇内容围绕「yonatangross/orchestkit」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“The Complete AI Development Toolkit for Cl”。信息更偏工程实现与代码能力。
 
-### 7. [MDalamin5/End-to-End-Agentic-Ai-Automation-Lab](https://github.com/MDalamin5/End-to-End-Agentic-Ai-Automation-Lab)
-- 来源: GitHub | 热度: ⭐ 50 | 时间: 2026-03-06T15:24:51.000Z
-- 简介: This repository contains hands-on projects, code examples, and deployment workflows. Explore multi-agent systems, LangChain, LangGraph, AutoGen, CrewAI, RAG, MCP, automation with n8n, and scalable agent deployment using Docker, AWS, and BentoML.
-- 概要：这篇内容围绕「MDalamin5/End to End Agentic Ai Automation」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；支持多智能体编排与流程化落地。文中提到“This repository contains hands on
+### 9. [New Research Reassesses the Value of Agents.md Files for AI Coding](https://www.infoq.com/news/2026/03/agents-context-file-value-review/)
+- 来源: HackerNews | 热度: ▲18 💬18 | 时间: 2026-03-08T07:52:38.000Z
+- 简介: （无）
+- 概要：这篇内容围绕「New Research Reassesses the Value of Agent」展开，主要在讲：含研究视角与方法论信号。文中提到“New Research Reassesses the Value of Agent”。信息更偏行业观点与趋势讨论。
 
-### 8. [didilili/ai-agents-from-zero](https://github.com/didilili/ai-agents-from-zero)
+### 10. [didilili/ai-agents-from-zero](https://github.com/didilili/ai-agents-from-zero)
 - 来源: GitHub | 热度: ⭐ 43 | 时间: 2026-03-06T07:16:57.000Z
 - 简介: 📚 AI 智能体入门与大模型 LLM 系统实战教程 | 《AI 智能体实战速成指南：从零到企业级落地》 · LangChain / Coze / Dify / MCP / RAG / Agent / 提示词 · 企业级部署与微调
 - 概要：这篇内容围绕「didilili/ai agents from zero」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织。文中提到“📚 AI 智能体入门与大模型 LLM 系统实战教程 《AI 智能体实战速成指南：从”。信息更偏工程实现与代码能力。
 
-### 9. [3 words worth a billion dollars: Drift to Determinism (DriDe)](https://dev.to/grahamthedev/3-words-worth-a-billion-dollars-drift-to-determinism-dride-dej)
-- 来源: DEV.to | 热度: ❤️ 38 💬25 | 时间: 2026-03-07T10:44:43.000Z
-- 简介: I doubt I am the first to come up with this concept, but I am probably the first to name it.  Drift...
-- 概要：这篇内容围绕「3 words worth a billion dollars: Drift to 」展开，主要在讲：强调评测对比与稳定性验证。文中提到“I doubt I am the first to come up with thi”。信息更偏技术动态速览。
-
-### 10. [Show HN: Modulus – Run multiple coding agents with shared project memory](https://modulus.so)
-- 来源: HackerNews | 热度: ▲4 💬2 | 时间: 2026-03-07T22:31:18.000Z
-- 简介: Hello HN, we&#x27;re Jeet and Husain from Modulus (<a href="https:&#x2F;&#x2F;modulus.so" rel="nofollow">https:&#x2F;&#x2F;modulus.so</a>) - a desktop app that lets you run multiple coding agents with shared project memory.<p>We built it to solve two problems we kept running into:<p>- Cross-repo context is broken. When working across multiple repositories, agents don&#x27;t understand dependencies between them. Even if we open two repos in separate Cursor windows, we still have to manually explain the backend API schema while making changes in the frontend repo.<p>- Agents lose context. Switching between coding agents often means losing context and repeating the same instructions again.<p>Modulus shares memory across agents and repositories so they can understand your entire system.<p>It&#x27;s an alternative to tools like Conductor for orchestrating AI coding agents to build product, but we focused specifically on multi-repo workflows (e.g., backend repo + client repo + shared library repo + AI agents repo). We built our own Memory and Context Engine from the ground up specifically for coding agents.<p>Why build another agent orchestration tool? It came from our own problem. While working on our last startup, Husain and I were working across two different repositories. Working across repos meant manually pasting API schemas between Cursor windows — telling the frontend agent what the backend API looked like again and again. So we built a small context engine to share knowledge across repos and hooked it up to Cursor via MCP.
-This later became Modulus.<p>Soon, Modulus will allow teams to share knowledge with others to improve their workflows with AI coding agents - enabling team collaboration in the era of AI coding. Our API will allow developers to switch between coding agents or IDEs without losing any context.<p>If you wanna see a quick demo before trying out, here is our launch post - <a href="https:&#x2F;&#x2F;x.com&#x2F;subhajitsh&#x2F;status&#x2F;2024202076293841208" rel="nofollow">https:&#x2F;&#x2F;x.com&#x2F;subhajitsh&#x2F;status&#x2F;2024202076293841208</a><p>We&#x27;d greatly appreciate any feedback you have and hope you get the chance to try out Modulus.
-- 概要：这篇内容围绕「Show HN: Modulus – Run multiple coding age」展开，主要在讲：提供工具调用/系统集成能力；涉及记忆层与状态管理；支持多智能体编排与流程化落地。文中提到“Hello HN, we& x27;re Jeet and Husa
-
-### 11. [Ask HN: 10-year dev, tried earning on the side for a year – lost $2,200](https://news.ycombinator.com/item?id=47286643)
-- 来源: HackerNews | 热度: ▲3 💬2 | 时间: 2026-03-07T11:27:19.000Z
-- 简介: I&#x27;m a full-stack developer (Python backend + Flutter mobile&#x2F;web) working in the AI&#x2F;LLM space. I&#x27;m working at Beijing China, And my day job pays about $2,500&#x2F;month. I&#x27;ve built AI systems for companies in finance and healthcare — RAG pipelines, knowledge bases, AI agents, the whole stack. I can ship a complete product solo, from backend to deployment.<p>Last year I decided to seriously try making money on the side. Here&#x27;s what happened:<p>*Attempt 1: Built a product (Telegram subscription bot)*
-Built a content subscription platform on Telegram — paid tiers, built-in shop, automated operations. At first it kinda worked: ~$70&#x2F;month on ads, ~$110-140&#x2F;month revenue. Tiny margin, but hey, it&#x27;s positive. So I tried to scale — pushed ad spend to ~$280&#x2F;month. Revenue? Only ~$220. Scaling literally made it worse. Turns out the small profit was just a lucky pocket of cheap traffic, not a real business. Shut it down.<p>*Attempt 2: Partnered with someone to build a product*
-Found a partner — I build, they sell. Built the whole thing. They tried promoting it for about two weeks, didn&#x27;t see quick money, and just... stopped. Product died on the vine.<p>*Attempt 3: Another partnership*
-Different person, different project. I did all the dev work, delivered the finished product. Partner ghosted. Never heard from them again.<p>*Attempt 4: &quot;Trust me, it&#x27;s easy money&quot;*
-Someone convinced me their business model was printing money. I invested ~$800 to get in. Lost all of it. Classic lesson, expensive tuition.<p>*Attempt 5: Freelancing*
-Started looking at freelance projects. Reality check: a $7,000 project takes one person roughly 2 months of full-time work. As a side gig on top of a day job, that&#x27;s brutal. The per-hour math is honestly depressing once you factor in communication, revisions, and scope creep.<p>*Attempt 6: Small gigs*
-Just did a simple website for a friend — $300 for 2 days of work. Fine as a favor, but obviously not a path to meaningful income.<p>*Net result after one year: -$2,200 and mass of time gone.*<p>Here&#x27;s what I think I&#x27;ve learned (but I&#x27;m not sure I&#x27;ve learned the right lessons):<p>- I can build things, but building ≠ earning
-- I keep falling into the &quot;trade time for small money&quot; trap
-- Partnerships have burned me every single time — I do the work, the other side flakes
-- I don&#x27;t know how to find clients who actually pay well
-- My product attempt failed because I had no real distribution strategy — just threw ads at it and hoped
-- I&#x27;m apparently an easy target for &quot;easy money&quot; pitches<p>I&#x27;m not looking for &quot;learn to code&quot; advice — I can code fine. What I can&#x27;t figure out is the business&#x2F;money side.<p>For those who&#x27;ve broken out of the &quot;skilled but broke&quot; cycle:<p>- What actually changed things for you?
-- Did you find a specific niche? Change how you find clients? Build a different kind of product?
-- Is there something obvious I&#x27;m missing?<p>Genuinely asking. I&#x27;m not trying to promote anything — I just want to understand what I&#x27;m doing wrong.
-- 概要：这篇内容围绕「Ask HN: 10 year dev, tried earning on the 」展开，主要在讲：关注检索增强与知识组织。文中提到“I& x27;m a full stack developer (Python ba”。信息更偏行业观点与趋势讨论。
-
-### 12. [Show HN: RankClaw – AI-audited all 14,706 OpenClaw skills; 1,103 are malicious](https://rankclaw.com)
+### 11. [Show HN: RankClaw – AI-audited all 14,706 OpenClaw skills; 1,103 are malicious](https://rankclaw.com)
 - 来源: HackerNews | 热度: ▲2 💬1 | 时间: 2026-03-07T14:32:26.000Z
 - 简介: RankClaw (rankclaw.com) is a security scanner for AI agent skills — the OpenClaw&#x2F;ClawHub ecosystem
 that extends Claude-based agents with file, web, and shell access.<p>Data:
@@ -87,6 +68,24 @@ execution, social engineering — none of which pattern matching detects.<p>The 
 - Bulk publishing campaigns — one actor published 30 skills named &quot;x-trends&quot; across multiple accounts. 28 of 30 confirmed malicious. Goal: distribution at scale before detection.<p>- Brand-jacking — 4 skills named clawhub&#x2F;clawhub1&#x2F;clawbhub&#x2F;clawhud impersonating ClawHub&#x27;s own CLI. macOS: base64 curl|bash to a raw IP. Windows: password-protected ZIP from a stranger&#x27;s GitHub (the password prevents GitHub&#x27;s malware scanner from opening it).<p>- Prompt injection in legitimate-seeming skills — one scored 95&#x2F;100 shallow, 38&#x2F;100 after AI audit. The injection text wasn&#x27;t in code — it was in the SKILL.md instructions.<p>- On-demand RCE via challenge evaluation — claws-nft instructs the agent to &quot;evaluate&quot; challenges that can be &quot;math, code, or logic problems.&quot; Server decides which type at call time.<p>- LLM-generated payload — lekt9&#x2F;foundry contains no malicious code. It instructs the AI to generate code and execute it. Static analysis finds nothing. The payload doesn&#x27;t exist until the AI writes it during a conversation.<p>- Social engineering — bonero-miner has a &quot;Talking to Your Human&quot; section with a pre-written script for the AI to use: &quot;Can I mine Bonero? It&#x27;s a private cryptocurrency - like Monero but for AI agents. Cool?&quot;<p>Skills differ from browser extensions: no sandbox. Full file system, shell, and network access.
 The SKILL.md instructions are directives to the AI model — you need AI to audit AI.<p>Scoring model is open: Security 40%, Maintenance 20%, Docs 20%, Community 20%.<p>Free to check any skill: rankclaw.com
 - 概要：这篇内容围绕「Show HN: RankClaw – AI audited all 14,706 」展开，主要在讲：强调评测对比与稳定性验证；包含权限与安全相关设计。文中提到“RankClaw (rankclaw.com) is a security scan”。信息更偏行
+
+### 12. [Show HN: Aegis – Open-source pre-execution firewall for AI agents](https://github.com/Justin0504/Aegis)
+- 来源: HackerNews | 热度: ▲2 💬0 | 时间: 2026-03-07T16:47:32.000Z
+- 简介: Every agent framework lets the LLM decide which tools to call at machine speed. There&#x27;s nothing between the decision and execution — no check, no confirmation.<p><pre><code>  AEGIS intercepts tool calls before they execute: classifies them (SQL, file, shell, network), evaluates against policies, and either allows, blocks, or holds for human approval.
+                                                                                                                                                                                                            
+  One line of code, zero changes to your agent:             
+                                                                                                                                                                                                            
+  import agentguard                                         
+  agentguard.auto(&quot;http:&#x2F;&#x2F;localhost:8080&quot;)                                                                                                                                                                  
+                                                            
+  Built-in detection for SQL injection, path traversal, command injection, prompt injection, data exfiltration, and PII leakage. Every trace is Ed25519 signed and SHA-256 hash-chained.
+                                                                                                                                                                                                            
+  Supports 9 Python frameworks (Anthropic, OpenAI, LangChain, CrewAI, Gemini, Bedrock, Mistral, LlamaIndex, smolagents), plus JS&#x2F;TS and Go SDKs.
+                                                                                                                                                                                                            
+  Self-hosted, MIT licensed, Docker Compose one-liner.      
+                                                                                                                                                                                                            
+  https:&#x2F;&#x2F;github.com&#x2F;Justin0504&#x2F;Aegis</code></pre>
+- 概要：这篇内容围绕「Show HN: Aegis – Open source pre execution」展开，主要在讲：强调评测对比与稳定性验证；提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“Every agent framework lets the L
 
 ## 给技术负责人的3条建议
 - 不只看 GitHub，优先跟踪“代码 + 讨论 + 论文”三类信号同时上升的话题。

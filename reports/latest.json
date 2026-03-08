@@ -1,10 +1,9 @@
 {
   "date": "2026-03-08",
-  "generated_at": "2026-03-08T08:00:32.448Z",
+  "generated_at": "2026-03-08T14:24:41.748Z",
   "source": "Multi-source",
   "sources": [
     "GitHub",
-    "DEV.to",
     "HackerNews"
   ],
   "counts": {
@@ -22,10 +21,10 @@
       "title": "doobidoo/mcp-memory-service",
       "description": "Open-source persistent memory for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude. REST API + knowledge graph + autonomous consolidation.",
       "url": "https://github.com/doobidoo/mcp-memory-service",
-      "metric": "⭐ 1468",
-      "metricValue": 1468,
-      "published_at": "2026-03-08T07:43:27.000Z",
-      "score": 72,
+      "metric": "⭐ 1472",
+      "metricValue": 1472,
+      "published_at": "2026-03-08T12:33:12.000Z",
+      "score": 72.02,
       "tags": [
         "MCP",
         "Persona"
@@ -38,10 +37,10 @@
       "title": "hidai25/eval-view",
       "description": "Proof your AI agent still works. Regression testing with golden baselines, tool-call diffing, and output drift detection. MCP server + Claude Code skills. LangGraph, CrewAI, Anthropic, OpenAI.",
       "url": "https://github.com/hidai25/eval-view",
-      "metric": "⭐ 51",
-      "metricValue": 51,
+      "metric": "⭐ 53",
+      "metricValue": 53,
       "published_at": "2026-03-07T22:39:30.000Z",
-      "score": 52.59,
+      "score": 52.79,
       "tags": [
         "MCP",
         "Eval"
@@ -50,14 +49,45 @@
     },
     {
       "source": "GitHub",
+      "id": "gh:985595150",
+      "title": "MDalamin5/End-to-End-Agentic-Ai-Automation-Lab",
+      "description": "This repository contains hands-on projects, code examples, and deployment workflows. Explore multi-agent systems, LangChain, LangGraph, AutoGen, CrewAI, RAG, MCP, automation with n8n, and scalable agent deployment using Docker, AWS, and BentoML.",
+      "url": "https://github.com/MDalamin5/End-to-End-Agentic-Ai-Automation-Lab",
+      "metric": "⭐ 50",
+      "metricValue": 50,
+      "published_at": "2026-03-08T09:32:23.000Z",
+      "score": 52.49,
+      "tags": [
+        "MCP",
+        "RAG"
+      ],
+      "summary": "概要：这篇内容围绕「MDalamin5/End to End Agentic Ai Automation」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；支持多智能体编排与流程化落地。文中提到“This repository contains hands on"
+    },
+    {
+      "source": "HackerNews",
+      "id": "hn:47295537",
+      "title": "SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via CI",
+      "description": "",
+      "url": "https://arxiv.org/abs/2603.03823",
+      "metric": "▲81 💬19",
+      "metricValue": 181,
+      "published_at": "2026-03-08T08:11:50.000Z",
+      "score": 51.12,
+      "tags": [
+        "Eval"
+      ],
+      "summary": "概要：这篇内容围绕「SWE CI: Evaluating Agent Capabilities in M」展开，主要在讲：强调评测对比与稳定性验证。文中提到“SWE CI: Evaluating Agent Capabilities in M”。信息更偏行业观点与趋势讨论。"
+    },
+    {
+      "source": "GitHub",
       "id": "gh:832196358",
       "title": "sinanuozdemir/oreilly-ai-agents",
       "description": "An introduction to the world of AI Agents",
       "url": "https://github.com/sinanuozdemir/oreilly-ai-agents",
-      "metric": "⭐ 256",
-      "metricValue": 256,
+      "metric": "⭐ 258",
+      "metricValue": 258,
       "published_at": "2026-03-06T16:49:32.000Z",
-      "score": 46.92,
+      "score": 46.96,
       "tags": [
         "General"
       ],
@@ -104,7 +134,7 @@
       "url": "https://github.com/yonatangross/orchestkit",
       "metric": "⭐ 110",
       "metricValue": 110,
-      "published_at": "2026-03-08T07:49:26.000Z",
+      "published_at": "2026-03-08T13:34:42.000Z",
       "score": 46.54,
       "tags": [
         "General"
@@ -112,20 +142,19 @@
       "summary": "概要：这篇内容围绕「yonatangross/orchestkit」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“The Complete AI Development Toolkit for Cl”。信息更偏工程实现与代码能力。"
     },
     {
-      "source": "GitHub",
-      "id": "gh:985595150",
-      "title": "MDalamin5/End-to-End-Agentic-Ai-Automation-Lab",
-      "description": "This repository contains hands-on projects, code examples, and deployment workflows. Explore multi-agent systems, LangChain, LangGraph, AutoGen, CrewAI, RAG, MCP, automation with n8n, and scalable agent deployment using Docker, AWS, and BentoML.",
-      "url": "https://github.com/MDalamin5/End-to-End-Agentic-Ai-Automation-Lab",
-      "metric": "⭐ 50",
-      "metricValue": 50,
-      "published_at": "2026-03-06T15:24:51.000Z",
-      "score": 46.49,
+      "source": "HackerNews",
+      "id": "hn:47295454",
+      "title": "New Research Reassesses the Value of Agents.md Files for AI Coding",
+      "description": "",
+      "url": "https://www.infoq.com/news/2026/03/agents-context-file-value-review/",
+      "metric": "▲18 💬18",
+      "metricValue": 54,
+      "published_at": "2026-03-08T07:52:38.000Z",
+      "score": 42.88,
       "tags": [
-        "MCP",
-        "RAG"
+        "General"
       ],
-      "summary": "概要：这篇内容围绕「MDalamin5/End to End Agentic Ai Automation」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；支持多智能体编排与流程化落地。文中提到“This repository contains hands on"
+      "summary": "概要：这篇内容围绕「New Research Reassesses the Value of Agent」展开，主要在讲：含研究视角与方法论信号。文中提到“New Research Reassesses the Value of Agent”。信息更偏行业观点与趋势讨论。"
     },
     {
       "source": "GitHub",
@@ -144,52 +173,6 @@
       "summary": "概要：这篇内容围绕「didilili/ai agents from zero」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织。文中提到“📚 AI 智能体入门与大模型 LLM 系统实战教程 《AI 智能体实战速成指南：从”。信息更偏工程实现与代码能力。"
     },
     {
-      "source": "DEV.to",
-      "id": "devto:3322125",
-      "title": "3 words worth a billion dollars: Drift to Determinism (DriDe)",
-      "description": "I doubt I am the first to come up with this concept, but I am probably the first to name it.  Drift...",
-      "url": "https://dev.to/grahamthedev/3-words-worth-a-billion-dollars-drift-to-determinism-dride-dej",
-      "metric": "❤️ 38 💬25",
-      "metricValue": 63,
-      "published_at": "2026-03-07T10:44:43.000Z",
-      "score": 41.67,
-      "tags": [
-        "General"
-      ],
-      "summary": "概要：这篇内容围绕「3 words worth a billion dollars: Drift to 」展开，主要在讲：强调评测对比与稳定性验证。文中提到“I doubt I am the first to come up with thi”。信息更偏技术动态速览。"
-    },
-    {
-      "source": "HackerNews",
-      "id": "hn:47292101",
-      "title": "Show HN: Modulus – Run multiple coding agents with shared project memory",
-      "description": "Hello HN, we&#x27;re Jeet and Husain from Modulus (<a href=\"https:&#x2F;&#x2F;modulus.so\" rel=\"nofollow\">https:&#x2F;&#x2F;modulus.so</a>) - a desktop app that lets you run multiple coding agents with shared project memory.<p>We built it to solve two problems we kept running into:<p>- Cross-repo context is broken. When working across multiple repositories, agents don&#x27;t understand dependencies between them. Even if we open two repos in separate Cursor windows, we still have to manually explain the backend API schema while making changes in the frontend repo.<p>- Agents lose context. Switching between coding agents often means losing context and repeating the same instructions again.<p>Modulus shares memory across agents and repositories so they can understand your entire system.<p>It&#x27;s an alternative to tools like Conductor for orchestrating AI coding agents to build product, but we focused specifically on multi-repo workflows (e.g., backend repo + client repo + shared library repo + AI agents repo). We built our own Memory and Context Engine from the ground up specifically for coding agents.<p>Why build another agent orchestration tool? It came from our own problem. While working on our last startup, Husain and I were working across two different repositories. Working across repos meant manually pasting API schemas between Cursor windows — telling the frontend agent what the backend API looked like again and again. So we built a small context engine to share knowledge across repos and hooked it up to Cursor via MCP.\nThis later became Modulus.<p>Soon, Modulus will allow teams to share knowledge with others to improve their workflows with AI coding agents - enabling team collaboration in the era of AI coding. Our API will allow developers to switch between coding agents or IDEs without losing any context.<p>If you wanna see a quick demo before trying out, here is our launch post - <a href=\"https:&#x2F;&#x2F;x.com&#x2F;subhajitsh&#x2F;status&#x2F;2024202076293841208\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;subhajitsh&#x2F;status&#x2F;2024202076293841208</a><p>We&#x27;d greatly appreciate any feedback you have and hope you get the chance to try out Modulus.",
-      "url": "https://modulus.so",
-      "metric": "▲4 💬2",
-      "metricValue": 10,
-      "published_at": "2026-03-07T22:31:18.000Z",
-      "score": 40.5,
-      "tags": [
-        "MCP",
-        "Persona"
-      ],
-      "summary": "概要：这篇内容围绕「Show HN: Modulus – Run multiple coding age」展开，主要在讲：提供工具调用/系统集成能力；涉及记忆层与状态管理；支持多智能体编排与流程化落地。文中提到“Hello HN, we& x27;re Jeet and Husa"
-    },
-    {
-      "source": "HackerNews",
-      "id": "hn:47286643",
-      "title": "Ask HN: 10-year dev, tried earning on the side for a year – lost $2,200",
-      "description": "I&#x27;m a full-stack developer (Python backend + Flutter mobile&#x2F;web) working in the AI&#x2F;LLM space. I&#x27;m working at Beijing China, And my day job pays about $2,500&#x2F;month. I&#x27;ve built AI systems for companies in finance and healthcare — RAG pipelines, knowledge bases, AI agents, the whole stack. I can ship a complete product solo, from backend to deployment.<p>Last year I decided to seriously try making money on the side. Here&#x27;s what happened:<p>*Attempt 1: Built a product (Telegram subscription bot)*\nBuilt a content subscription platform on Telegram — paid tiers, built-in shop, automated operations. At first it kinda worked: ~$70&#x2F;month on ads, ~$110-140&#x2F;month revenue. Tiny margin, but hey, it&#x27;s positive. So I tried to scale — pushed ad spend to ~$280&#x2F;month. Revenue? Only ~$220. Scaling literally made it worse. Turns out the small profit was just a lucky pocket of cheap traffic, not a real business. Shut it down.<p>*Attempt 2: Partnered with someone to build a product*\nFound a partner — I build, they sell. Built the whole thing. They tried promoting it for about two weeks, didn&#x27;t see quick money, and just... stopped. Product died on the vine.<p>*Attempt 3: Another partnership*\nDifferent person, different project. I did all the dev work, delivered the finished product. Partner ghosted. Never heard from them again.<p>*Attempt 4: &quot;Trust me, it&#x27;s easy money&quot;*\nSomeone convinced me their business model was printing money. I invested ~$800 to get in. Lost all of it. Classic lesson, expensive tuition.<p>*Attempt 5: Freelancing*\nStarted looking at freelance projects. Reality check: a $7,000 project takes one person roughly 2 months of full-time work. As a side gig on top of a day job, that&#x27;s brutal. The per-hour math is honestly depressing once you factor in communication, revisions, and scope creep.<p>*Attempt 6: Small gigs*\nJust did a simple website for a friend — $300 for 2 days of work. Fine as a favor, but obviously not a path to meaningful income.<p>*Net result after one year: -$2,200 and mass of time gone.*<p>Here&#x27;s what I think I&#x27;ve learned (but I&#x27;m not sure I&#x27;ve learned the right lessons):<p>- I can build things, but building ≠ earning\n- I keep falling into the &quot;trade time for small money&quot; trap\n- Partnerships have burned me every single time — I do the work, the other side flakes\n- I don&#x27;t know how to find clients who actually pay well\n- My product attempt failed because I had no real distribution strategy — just threw ads at it and hoped\n- I&#x27;m apparently an easy target for &quot;easy money&quot; pitches<p>I&#x27;m not looking for &quot;learn to code&quot; advice — I can code fine. What I can&#x27;t figure out is the business&#x2F;money side.<p>For those who&#x27;ve broken out of the &quot;skilled but broke&quot; cycle:<p>- What actually changed things for you?\n- Did you find a specific niche? Change how you find clients? Build a different kind of product?\n- Is there something obvious I&#x27;m missing?<p>Genuinely asking. I&#x27;m not trying to promote anything — I just want to understand what I&#x27;m doing wrong.",
-      "url": "https://news.ycombinator.com/item?id=47286643",
-      "metric": "▲3 💬2",
-      "metricValue": 8,
-      "published_at": "2026-03-07T11:27:19.000Z",
-      "score": 39.45,
-      "tags": [
-        "RAG"
-      ],
-      "summary": "概要：这篇内容围绕「Ask HN: 10 year dev, tried earning on the 」展开，主要在讲：关注检索增强与知识组织。文中提到“I& x27;m a full stack developer (Python ba”。信息更偏行业观点与趋势讨论。"
-    },
-    {
       "source": "HackerNews",
       "id": "hn:47287985",
       "title": "Show HN: RankClaw – AI-audited all 14,706 OpenClaw skills; 1,103 are malicious",
@@ -204,6 +187,21 @@
         "Persona"
       ],
       "summary": "概要：这篇内容围绕「Show HN: RankClaw – AI audited all 14,706 」展开，主要在讲：强调评测对比与稳定性验证；包含权限与安全相关设计。文中提到“RankClaw (rankclaw.com) is a security scan”。信息更偏行"
+    },
+    {
+      "source": "HackerNews",
+      "id": "hn:47289229",
+      "title": "Show HN: Aegis – Open-source pre-execution firewall for AI agents",
+      "description": "Every agent framework lets the LLM decide which tools to call at machine speed. There&#x27;s nothing between the decision and execution — no check, no confirmation.<p><pre><code>  AEGIS intercepts tool calls before they execute: classifies them (SQL, file, shell, network), evaluates against policies, and either allows, blocks, or holds for human approval.\n                                                                                                                                                                                                            \n  One line of code, zero changes to your agent:             \n                                                                                                                                                                                                            \n  import agentguard                                         \n  agentguard.auto(&quot;http:&#x2F;&#x2F;localhost:8080&quot;)                                                                                                                                                                  \n                                                            \n  Built-in detection for SQL injection, path traversal, command injection, prompt injection, data exfiltration, and PII leakage. Every trace is Ed25519 signed and SHA-256 hash-chained.\n                                                                                                                                                                                                            \n  Supports 9 Python frameworks (Anthropic, OpenAI, LangChain, CrewAI, Gemini, Bedrock, Mistral, LlamaIndex, smolagents), plus JS&#x2F;TS and Go SDKs.\n                                                                                                                                                                                                            \n  Self-hosted, MIT licensed, Docker Compose one-liner.      \n                                                                                                                                                                                                            \n  https:&#x2F;&#x2F;github.com&#x2F;Justin0504&#x2F;Aegis</code></pre>",
+      "url": "https://github.com/Justin0504/Aegis",
+      "metric": "▲2 💬0",
+      "metricValue": 4,
+      "published_at": "2026-03-07T16:47:32.000Z",
+      "score": 38.39,
+      "tags": [
+        "Eval"
+      ],
+      "summary": "概要：这篇内容围绕「Show HN: Aegis – Open source pre execution」展开，主要在讲：强调评测对比与稳定性验证；提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“Every agent framework lets the L"
     }
   ]
 }
