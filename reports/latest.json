@@ -1,15 +1,16 @@
 {
-  "date": "2026-03-08",
-  "generated_at": "2026-03-08T14:24:41.748Z",
+  "date": "2026-03-09",
+  "generated_at": "2026-03-09T08:00:09.935Z",
   "source": "Multi-source",
   "sources": [
     "GitHub",
+    "Reddit",
     "HackerNews"
   ],
   "counts": {
-    "github": 10,
+    "github": 11,
     "hackernews": 75,
-    "reddit": 0,
+    "reddit": 90,
     "arxiv": 20,
     "producthunt": 30,
     "devto": 30
@@ -21,15 +22,30 @@
       "title": "doobidoo/mcp-memory-service",
       "description": "Open-source persistent memory for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude. REST API + knowledge graph + autonomous consolidation.",
       "url": "https://github.com/doobidoo/mcp-memory-service",
-      "metric": "⭐ 1472",
-      "metricValue": 1472,
+      "metric": "⭐ 1475",
+      "metricValue": 1475,
       "published_at": "2026-03-08T12:33:12.000Z",
-      "score": 72.02,
+      "score": 72.03,
       "tags": [
         "MCP",
         "Persona"
       ],
       "summary": "概要：这篇内容围绕「doobidoo/mcp memory service」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；涉及记忆层与状态管理。文中提到“Open source persistent memory for AI agent”。信息更偏工程实现"
+    },
+    {
+      "source": "Reddit",
+      "id": "rd:1ro7xve",
+      "title": "Qwen3.5 family comparison on shared benchmarks",
+      "description": "Main takeaway: 122B, 35B, and especially 27B retain a lot of the flagship’s performance, while 2B/0.8B fall off much harder on long-context and agent categories.",
+      "url": "https://i.redd.it/krs0xrebcung1.png",
+      "metric": "⬆ 846 💬212",
+      "metricValue": 1058,
+      "published_at": "2026-03-08T15:39:32.000Z",
+      "score": 60.3,
+      "tags": [
+        "Eval"
+      ],
+      "summary": "概要：这篇内容围绕「Qwen3.5 family comparison on shared benchm」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Main takeaway: 122B, 35B, and especially 2”。信息更偏社区反馈与实测体验"
     },
     {
       "source": "GitHub",
@@ -39,7 +55,7 @@
       "url": "https://github.com/hidai25/eval-view",
       "metric": "⭐ 53",
       "metricValue": 53,
-      "published_at": "2026-03-07T22:39:30.000Z",
+      "published_at": "2026-03-09T07:56:05.000Z",
       "score": 52.79,
       "tags": [
         "MCP",
@@ -64,97 +80,79 @@
       "summary": "概要：这篇内容围绕「MDalamin5/End to End Agentic Ai Automation」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；支持多智能体编排与流程化落地。文中提到“This repository contains hands on"
     },
     {
-      "source": "HackerNews",
-      "id": "hn:47295537",
-      "title": "SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via CI",
+      "source": "Reddit",
+      "id": "rd:1ro52cu",
+      "title": "I classified 3.5M US patents with Nemotron 9B on a single RTX 5090 — then built a free search engine on top",
+      "description": "Patent lawyer here, started coding Dec 2025.\n\n**The pipeline:**\n\n* Downloaded 3.5M US patents (2016-2025) from USPTO PatentsView\n* Loaded everything into a single 74GB SQLite file with FTS5\n* Ran Nemotron 9B locally on RTX 5090 to classify records into 100 tech tags (\\~48 hours)\n",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1ro52cu/i_classified_35m_us_patents_with_nemotron_9b_on_a/",
+      "metric": "⬆ 323 💬101",
+      "metricValue": 424,
+      "published_at": "2026-03-08T13:36:16.000Z",
+      "score": 51.54,
+      "tags": [
+        "General"
+      ],
+      "summary": "概要：这篇内容围绕「I classified 3.5M US patents with Nemotron」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Patent lawyer here, started coding Dec 202”。信息更偏社区反馈与实测体验"
+    },
+    {
+      "source": "GitHub",
+      "id": "gh:961856693",
+      "title": "omerbsezer/Fast-LLM-Agent-MCP",
+      "description": "This repo covers LLM, Agents concepts both theoretically and practically: LangChain & LangGraph, AWS Strands Agents, Google Agent Development Kit, Fundamentals",
+      "url": "https://github.com/omerbsezer/Fast-LLM-Agent-MCP",
+      "metric": "⭐ 57",
+      "metricValue": 57,
+      "published_at": "2026-03-08T20:42:28.000Z",
+      "score": 49.16,
+      "tags": [
+        "MCP"
+      ],
+      "summary": "概要：这篇内容围绕「omerbsezer/Fast LLM Agent MCP」展开，主要在讲：提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“This repo covers LLM, Agents concepts both”。信息更偏工程实现与代码能力。"
+    },
+    {
+      "source": "Reddit",
+      "id": "rd:1ro71ou",
+      "title": "The Silent OpenAI Fallback: Why LlamaIndex Might Be Leaking Your \"100% Local\" RAG Data",
+      "description": "*Hey everyone, just caught something genuinely concerning while auditing the architecture of my 100% offline, privacy-first AI system (Sovereign Pair) and I think the localLLaMA community needs to be aware of this.*\n\nIf you are building a Local-First RAG using **LlamaIndex**, dou",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1ro71ou/the_silent_openai_fallback_why_llamaindex_might/",
+      "metric": "⬆ 124 💬50",
+      "metricValue": 174,
+      "published_at": "2026-03-08T15:02:51.000Z",
+      "score": 48.92,
+      "tags": [
+        "RAG"
+      ],
+      "summary": "概要：这篇内容围绕「The Silent OpenAI Fallback: Why LlamaIndex」展开，主要在讲：关注检索增强与知识组织。文中提到“Hey everyone, just caught something genuin”。信息更偏社区反馈与实测体验。"
+    },
+    {
+      "source": "Reddit",
+      "id": "rd:1ro1ybn",
+      "title": "Anthropic'c Claude found 22 vulnerabilities in Firefox in just two weeks",
       "description": "",
-      "url": "https://arxiv.org/abs/2603.03823",
-      "metric": "▲81 💬19",
-      "metricValue": 181,
-      "published_at": "2026-03-08T08:11:50.000Z",
-      "score": 51.12,
-      "tags": [
-        "Eval"
-      ],
-      "summary": "概要：这篇内容围绕「SWE CI: Evaluating Agent Capabilities in M」展开，主要在讲：强调评测对比与稳定性验证。文中提到“SWE CI: Evaluating Agent Capabilities in M”。信息更偏行业观点与趋势讨论。"
-    },
-    {
-      "source": "GitHub",
-      "id": "gh:832196358",
-      "title": "sinanuozdemir/oreilly-ai-agents",
-      "description": "An introduction to the world of AI Agents",
-      "url": "https://github.com/sinanuozdemir/oreilly-ai-agents",
-      "metric": "⭐ 258",
-      "metricValue": 258,
-      "published_at": "2026-03-06T16:49:32.000Z",
-      "score": 46.96,
+      "url": "https://i.redd.it/81yz4h35dhng1.png",
+      "metric": "⬆ 183 💬41",
+      "metricValue": 224,
+      "published_at": "2026-03-08T10:53:35.000Z",
+      "score": 48.23,
       "tags": [
         "General"
       ],
-      "summary": "概要：这篇内容围绕「sinanuozdemir/oreilly ai agents」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“An introduction to the world of AI Agents”。信息更偏工程实现与代码能力。"
-    },
-    {
-      "source": "GitHub",
-      "id": "gh:1022054597",
-      "title": "yaalalabs/agent-kernel",
-      "description": "Multi-cloud, framwork-agnostic AI agent runtime for building, testing, and deploying production agents across OpenAI, CrewAI, LangGraph, and Google ADK. Deploy the same agent code to AWS or Azure with built-in session management, execution hooks, MCP/A2A support, guardrails, observability and fault tolerance.",
-      "url": "https://github.com/yaalalabs/agent-kernel",
-      "metric": "⭐ 24",
-      "metricValue": 24,
-      "published_at": "2026-03-08T07:20:02.000Z",
-      "score": 46.78,
-      "tags": [
-        "MCP",
-        "Observability"
-      ],
-      "summary": "概要：这篇内容围绕「yaalalabs/agent kernel」展开，主要在讲：提供工具调用/系统集成能力；支持多智能体编排与流程化落地；突出可观测与质量追踪。文中提到“Multi cloud, framwork agnostic AI agent ru”。信息更偏工程实现与代"
-    },
-    {
-      "source": "GitHub",
-      "id": "gh:967127806",
-      "title": "hoangsonww/EstateWise-Chapel-Hill-Chatbot",
-      "description": "🏠 An AI real estate app featuring secure auth, conversation management, & personalized property recommendations. Powered by Agentic AI, RAG (w/ Pinecone), GraphRAG (w/ Neo4j), MCP, kNN, K‑Means Clustering, CoT, LangGraph, and a Mixture‑of‑Experts ensemble to deliver accurate, effective, and scalable AI insights. Also features a VS Code extension!",
-      "url": "https://github.com/hoangsonww/EstateWise-Chapel-Hill-Chatbot",
-      "metric": "⭐ 23",
-      "metricValue": 23,
-      "published_at": "2026-03-07T20:44:54.000Z",
-      "score": 46.56,
-      "tags": [
-        "MCP",
-        "RAG",
-        "Persona"
-      ],
-      "summary": "概要：这篇内容围绕「hoangsonww/EstateWise Chapel Hill Chatbot」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；涉及记忆层与状态管理。文中提到“🏠 An AI real estate app featuring sec"
-    },
-    {
-      "source": "GitHub",
-      "id": "gh:1125663750",
-      "title": "yonatangross/orchestkit",
-      "description": "The Complete AI Development Toolkit for Claude Code — 79 skills, 30 agents, 105 hooks. Production-ready patterns for full-stack development.",
-      "url": "https://github.com/yonatangross/orchestkit",
-      "metric": "⭐ 110",
-      "metricValue": 110,
-      "published_at": "2026-03-08T13:34:42.000Z",
-      "score": 46.54,
-      "tags": [
-        "General"
-      ],
-      "summary": "概要：这篇内容围绕「yonatangross/orchestkit」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“The Complete AI Development Toolkit for Cl”。信息更偏工程实现与代码能力。"
+      "summary": "概要：这篇内容围绕「Anthropic'c Claude found 22 vulnerabilitie」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Anthropic'c Claude found 22 vulnerabilitie”。信息更偏社区反馈与实测体验"
     },
     {
       "source": "HackerNews",
-      "id": "hn:47295454",
-      "title": "New Research Reassesses the Value of Agents.md Files for AI Coding",
-      "description": "",
-      "url": "https://www.infoq.com/news/2026/03/agents-context-file-value-review/",
-      "metric": "▲18 💬18",
-      "metricValue": 54,
-      "published_at": "2026-03-08T07:52:38.000Z",
-      "score": 42.88,
+      "id": "hn:47305149",
+      "title": "Show HN: Mcp2cli – One CLI for every API, 96-99% fewer tokens than native MCP",
+      "description": "Every MCP server injects its full tool schemas into context on every turn — 30 tools costs ~3,600 tokens&#x2F;turn whether the model uses them or not. Over 25 turns with 120 tools, that&#x27;s 362,000 tokens just for schemas.<p>mcp2cli turns any MCP server or OpenAPI spec into a CLI at runtime. The LLM discovers tools on demand:<p><pre><code>    mcp2cli --mcp https:&#x2F;&#x2F;mcp.example.com&#x2F;sse --list             # ~16 tokens&#x2F;tool\n    mcp2cli --mcp https:&#x2F;&#x2F;mcp.example.com&#x2F;sse create-task --help  # ~120 tokens, once\n    mcp2cli --mcp https:&#x2F;&#x2F;mcp.example.com&#x2F;sse create-task --title &quot;Fix bug&quot;\n</code></pre>\nNo codegen, no rebuild when the server changes. Works with any LLM — it&#x27;s just a CLI the model shells out to. Also handles OpenAPI specs (JSON&#x2F;YAML, local or remote) with the same interface.<p>Token savings are real, measured with cl100k_base: 96% for 30 tools over 15 turns, 99% for 120 tools over 25 turns.<p>It also ships as an installable skill for AI coding agents (Claude Code, Cursor, Codex): `npx skills add knowsuchagency&#x2F;mcp2cli --skill mcp2cli`<p>Inspired by Kagan Yilmaz&#x27;s CLI vs MCP analysis and CLIHub.<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;knowsuchagency&#x2F;mcp2cli\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;knowsuchagency&#x2F;mcp2cli</a>",
+      "url": "https://github.com/knowsuchagency/mcp2cli",
+      "metric": "▲27 💬13",
+      "metricValue": 67,
+      "published_at": "2026-03-09T05:18:46.000Z",
+      "score": 47.99,
       "tags": [
-        "General"
+        "MCP"
       ],
-      "summary": "概要：这篇内容围绕「New Research Reassesses the Value of Agent」展开，主要在讲：含研究视角与方法论信号。文中提到“New Research Reassesses the Value of Agent”。信息更偏行业观点与趋势讨论。"
+      "summary": "概要：这篇内容围绕「Show HN: Mcp2cli – One CLI for every API, 」展开，主要在讲：提供工具调用/系统集成能力。文中提到“Every MCP server injects its full tool sch”。信息更偏行业观点与趋势讨论。"
     },
     {
       "source": "GitHub",
@@ -162,10 +160,10 @@
       "title": "didilili/ai-agents-from-zero",
       "description": "📚 AI 智能体入门与大模型 LLM 系统实战教程 | 《AI 智能体实战速成指南：从零到企业级落地》 · LangChain / Coze / Dify / MCP / RAG / Agent / 提示词 · 企业级部署与微调",
       "url": "https://github.com/didilili/ai-agents-from-zero",
-      "metric": "⭐ 43",
-      "metricValue": 43,
-      "published_at": "2026-03-06T07:16:57.000Z",
-      "score": 41.72,
+      "metric": "⭐ 44",
+      "metricValue": 44,
+      "published_at": "2026-03-09T05:51:44.000Z",
+      "score": 47.84,
       "tags": [
         "MCP",
         "RAG"
@@ -173,35 +171,34 @@
       "summary": "概要：这篇内容围绕「didilili/ai agents from zero」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织。文中提到“📚 AI 智能体入门与大模型 LLM 系统实战教程 《AI 智能体实战速成指南：从”。信息更偏工程实现与代码能力。"
     },
     {
-      "source": "HackerNews",
-      "id": "hn:47287985",
-      "title": "Show HN: RankClaw – AI-audited all 14,706 OpenClaw skills; 1,103 are malicious",
-      "description": "RankClaw (rankclaw.com) is a security scanner for AI agent skills — the OpenClaw&#x2F;ClawHub ecosystem\nthat extends Claude-based agents with file, web, and shell access.<p>Data:\n- 14,706 skills indexed\n- Every single skill has a full AI deep audit report (14,704 complete)\n- 1,103 confirmed malicious (7.5%)<p>The key finding: automated surface scanning (metadata, dependency checks, pattern matching)\nsystematically undercounts malicious skills. Skills that pass shallow heuristics fail AI audit\nbecause the attack is in the natural language of the SKILL.md — prompt injection, deferred\nexecution, social engineering — none of which pattern matching detects.<p>The attack patterns found by AI deep audit:\n- Bulk publishing campaigns — one actor published 30 skills named &quot;x-trends&quot; across multiple accounts. 28 of 30 confirmed malicious. Goal: distribution at scale before detection.<p>- Brand-jacking — 4 skills named clawhub&#x2F;clawhub1&#x2F;clawbhub&#x2F;clawhud impersonating ClawHub&#x27;s own CLI. macOS: base64 curl|bash to a raw IP. Windows: password-protected ZIP from a stranger&#x27;s GitHub (the password prevents GitHub&#x27;s malware scanner from opening it).<p>- Prompt injection in legitimate-seeming skills — one scored 95&#x2F;100 shallow, 38&#x2F;100 after AI audit. The injection text wasn&#x27;t in code — it was in the SKILL.md instructions.<p>- On-demand RCE via challenge evaluation — claws-nft instructs the agent to &quot;evaluate&quot; challenges that can be &quot;math, code, or logic problems.&quot; Server decides which type at call time.<p>- LLM-generated payload — lekt9&#x2F;foundry contains no malicious code. It instructs the AI to generate code and execute it. Static analysis finds nothing. The payload doesn&#x27;t exist until the AI writes it during a conversation.<p>- Social engineering — bonero-miner has a &quot;Talking to Your Human&quot; section with a pre-written script for the AI to use: &quot;Can I mine Bonero? It&#x27;s a private cryptocurrency - like Monero but for AI agents. Cool?&quot;<p>Skills differ from browser extensions: no sandbox. Full file system, shell, and network access.\nThe SKILL.md instructions are directives to the AI model — you need AI to audit AI.<p>Scoring model is open: Security 40%, Maintenance 20%, Docs 20%, Community 20%.<p>Free to check any skill: rankclaw.com",
-      "url": "https://rankclaw.com",
-      "metric": "▲2 💬1",
-      "metricValue": 5,
-      "published_at": "2026-03-07T14:32:26.000Z",
-      "score": 39.34,
+      "source": "Reddit",
+      "id": "rd:1ro7j0b",
+      "title": "Kokoro TTS now hooked to my Claude Code CLI",
+      "description": "I want to share something fun I made with Kokoro TTS while waiting for all the subagents to finish their tasks. Claude Code's notification does not make any sound on my mac, so I let it hooks itself to Kokoro TTS. Very helpful when she explains what she is doing, and her sass rea",
+      "url": "https://v.redd.it/9antrjuc9ung1",
+      "metric": "⬆ 114 💬22",
+      "metricValue": 136,
+      "published_at": "2026-03-08T15:22:23.000Z",
+      "score": 47.64,
       "tags": [
-        "Eval",
-        "Persona"
+        "General"
       ],
-      "summary": "概要：这篇内容围绕「Show HN: RankClaw – AI audited all 14,706 」展开，主要在讲：强调评测对比与稳定性验证；包含权限与安全相关设计。文中提到“RankClaw (rankclaw.com) is a security scan”。信息更偏行"
+      "summary": "概要：这篇内容围绕「Kokoro TTS now hooked to my Claude Code CL」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“I want to share something fun I made with ”。信息更偏社区反馈与实测体验"
     },
     {
-      "source": "HackerNews",
-      "id": "hn:47289229",
-      "title": "Show HN: Aegis – Open-source pre-execution firewall for AI agents",
-      "description": "Every agent framework lets the LLM decide which tools to call at machine speed. There&#x27;s nothing between the decision and execution — no check, no confirmation.<p><pre><code>  AEGIS intercepts tool calls before they execute: classifies them (SQL, file, shell, network), evaluates against policies, and either allows, blocks, or holds for human approval.\n                                                                                                                                                                                                            \n  One line of code, zero changes to your agent:             \n                                                                                                                                                                                                            \n  import agentguard                                         \n  agentguard.auto(&quot;http:&#x2F;&#x2F;localhost:8080&quot;)                                                                                                                                                                  \n                                                            \n  Built-in detection for SQL injection, path traversal, command injection, prompt injection, data exfiltration, and PII leakage. Every trace is Ed25519 signed and SHA-256 hash-chained.\n                                                                                                                                                                                                            \n  Supports 9 Python frameworks (Anthropic, OpenAI, LangChain, CrewAI, Gemini, Bedrock, Mistral, LlamaIndex, smolagents), plus JS&#x2F;TS and Go SDKs.\n                                                                                                                                                                                                            \n  Self-hosted, MIT licensed, Docker Compose one-liner.      \n                                                                                                                                                                                                            \n  https:&#x2F;&#x2F;github.com&#x2F;Justin0504&#x2F;Aegis</code></pre>",
-      "url": "https://github.com/Justin0504/Aegis",
-      "metric": "▲2 💬0",
-      "metricValue": 4,
-      "published_at": "2026-03-07T16:47:32.000Z",
-      "score": 38.39,
+      "source": "Reddit",
+      "id": "rd:1rodx13",
+      "title": "My first setup for local ai",
+      "description": "Thanks to TheAhmadOsman buy a gpu movement, I to got myself a decent starter setup \nSpecs:\n2x 3090er (evga and gainward phoenix)\nRam: 96gb  ddr5 corsair Vengeance \nRyzen 9 9950x\nASUS ProArt X870E-CREATOR WIFI\nbe quite 1600 w\nFractal meshify 2xl\nSsd 2tb\nSsd 4tb\n6 noctuas inside\n\nT",
+      "url": "https://www.reddit.com/gallery/1rodx13",
+      "metric": "⬆ 148 💬49",
+      "metricValue": 197,
+      "published_at": "2026-03-08T19:27:45.000Z",
+      "score": 47.56,
       "tags": [
-        "Eval"
+        "General"
       ],
-      "summary": "概要：这篇内容围绕「Show HN: Aegis – Open source pre execution」展开，主要在讲：强调评测对比与稳定性验证；提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“Every agent framework lets the L"
+      "summary": "概要：这篇内容围绕「My first setup for local ai」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Thanks to TheAhmadOsman buy a gpu movement”。信息更偏社区反馈与实测体验。"
     }
   ]
 }
