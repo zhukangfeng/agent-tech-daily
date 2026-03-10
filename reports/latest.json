@@ -1,14 +1,14 @@
 {
-  "date": "2026-03-09",
-  "generated_at": "2026-03-09T08:00:09.935Z",
+  "date": "2026-03-10",
+  "generated_at": "2026-03-10T08:00:09.090Z",
   "source": "Multi-source",
   "sources": [
     "GitHub",
-    "Reddit",
-    "HackerNews"
+    "HackerNews",
+    "Reddit"
   ],
   "counts": {
-    "github": 11,
+    "github": 10,
     "hackernews": 75,
     "reddit": 90,
     "arxiv": 20,
@@ -22,10 +22,10 @@
       "title": "doobidoo/mcp-memory-service",
       "description": "Open-source persistent memory for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude. REST API + knowledge graph + autonomous consolidation.",
       "url": "https://github.com/doobidoo/mcp-memory-service",
-      "metric": "⭐ 1475",
-      "metricValue": 1475,
+      "metric": "⭐ 1488",
+      "metricValue": 1488,
       "published_at": "2026-03-08T12:33:12.000Z",
-      "score": 72.03,
+      "score": 66.07,
       "tags": [
         "MCP",
         "Persona"
@@ -33,19 +33,34 @@
       "summary": "概要：这篇内容围绕「doobidoo/mcp memory service」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；涉及记忆层与状态管理。文中提到“Open source persistent memory for AI agent”。信息更偏工程实现"
     },
     {
-      "source": "Reddit",
-      "id": "rd:1ro7xve",
-      "title": "Qwen3.5 family comparison on shared benchmarks",
-      "description": "Main takeaway: 122B, 35B, and especially 27B retain a lot of the flagship’s performance, while 2B/0.8B fall off much harder on long-context and agent categories.",
-      "url": "https://i.redd.it/krs0xrebcung1.png",
-      "metric": "⬆ 846 💬212",
-      "metricValue": 1058,
-      "published_at": "2026-03-08T15:39:32.000Z",
-      "score": 60.3,
+      "source": "HackerNews",
+      "id": "hn:47312728",
+      "title": "Show HN: The Mog Programming Language",
+      "description": "Hi, Ted here, creator of Mog.<p>- Mog is a statically typed, compiled, embedded language (think statically typed Lua) designed to be written by LLMs -- the full spec fits in 3,200 tokens.\n- An AI agent writes a Mog program, compiles it, and dynamically loads it as a plugin, script, or hook.\n- The host controls exactly which functions a Mog program can call (capability-based permissions), so permissions propagate from agent to agent-written code.\n- Compiled to native code for low-latency plugin execution -- no interpreter overhead, no JIT, no process startup cost.\n- The compiler is written in safe Rust so the entire toolchain can be audited for security. Even without a full security audit, Mog is already useful for agents extending themselves with their own code.\n- MIT licensed, contributions welcome.<p>Motivations for Mog:<p>1. Syntax Only an AI Could Love: Mog is written for AIs to write, so the spec fits easily in context (~3200 tokens), and it&#x27;s intended to minimize foot-guns to lower the error rate when generating Mog code. This is why Mog has no operator precedence: non-associative operations have to use parentheses, e.g.  (a + b) * c. It&#x27;s also why there&#x27;s no implicit type coercion, which I&#x27;ve found over the decades to be an annoying source of runtime bugs. There&#x27;s also less support in Mog for generics, and there&#x27;s absolutely no support for metaprogramming, macros, or syntactic abstraction.<p>When asking people to write code in a language, these restrictions could be onerous. But LLMs don&#x27;t care, and the less expressivity you trust them with, the better.<p>2. Capabilities-Based Permissionsl: There&#x27;s a paradox with existing security models for AI agents. If you give an agent like OpenClaw unfettered access to your data, that&#x27;s insecure and you&#x27;ll get pwned. But if you sandbox it, it can&#x27;t do most of what you want. Worse, if you run scripts the agent wrote, those scripts don&#x27;t inherit the permissions that constrain the agent&#x27;s own bash tool calls, which leads to pwnage and other chaos. And that&#x27;s not even assuming you run one of the many OpenClaw plugins with malware.<p>Mog tries to solve this by taking inspiration from embedded languages. It compiles all the way to machine code, ahead of time, but the compiler doesn&#x27;t output any dangerous code (at least it shouldn&#x27;t -- Mog is quite new, so that could still be buggy). This allows a host program, such as an AI agent, to generate Mog source code, compile it, and load it into itself using dlopen(), while maintaining security guarantees.<p>The main trick is that a Mog program on its own can&#x27;t do much. It has no direct access to syscalls, libc, or memory. It can basically call functions, do heap allocations (but only within the arena the host gives it), and return something. If the host wants the Mog program to be able to do I&#x2F;O, it has to supply the functions that the Mog program will call. A core invariant is that a Mog program should never be able to crash the host program, corrupt its state, or consume more resources than the host allows.<p>This allows the host to inspect the arguments to any potentially dangerous operation that the Mog program attempts, since it&#x27;s code that runs in the host. For example, a host agent could give a Mog program a function to run a bash command, then enforce its own session-level permissions on that command, even though the command was dynamically generated by a plugin that was written without prior knowledge of those permission settings.<p>(There are a couple other tricks that PL people might find interesting. One is that the host can limit the execution time of the guest program. It does this using cooperative interrupt polling, i.e. the compiler inserts runtime checks that check if the host has asked the guest to stop. This causes a roughly 10% drop in performance on extremely tight loops, which are the worst case. It could almost certainly be optimized.)<p>3.  Self Modification Without Restart: When I try to modify my OpenClaw from my phone, I have to restart the whole agent. Mog fixes this: an agent can compile and run new plugins without interrupting a session, which makes it dynamically responsive to user feedback (e.g., you tell it to always ask you before deleting a file and without any interruption it compiles and loads the code to... actually do that).<p>Async support is built into the language, by adapting LLVM&#x27;s coroutine lowering to our Rust port of the QBE compiler, which is what Mog uses for compilation. The Mog host library can be slotted into an async event loop (tested with Bun), so Mog async calls get scheduled seamlessly by the agent&#x27;s event loop.\nAnother trick is that the Mog program uses a stack inside the memory arena that the host provides for it to run in, rather than the system stack. The system tracks a guard page between the stack and heap. This design prevents stack overflow without runtime overhead.<p>Lots of work still needs to be done to make Mog a &quot;batteries-included&quot; experience like Python. Most of that work involves fleshing out a standard library to include things like JSON, CSV, Sqlite, and HTTP. One high-impact addition would be an `llm` library that allows the guest to make LLM calls through the agent, which should support multiple models and token budgeting, so the host could prevent the plugin from burning too many tokens.<p>I suspect we&#x27;ll also want to do more work to make the program lifecycle operations more ergonomic. And finally, there should be a more fully featured library for integrating a Mog host into an AI agent like OpenClaw or OpenAI&#x27;s Codex CLI.",
+      "url": "https://moglang.org",
+      "metric": "▲145 💬70",
+      "metricValue": 360,
+      "published_at": "2026-03-09T17:57:00.000Z",
+      "score": 58.69,
       "tags": [
-        "Eval"
+        "Persona"
       ],
-      "summary": "概要：这篇内容围绕「Qwen3.5 family comparison on shared benchm」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Main takeaway: 122B, 35B, and especially 2”。信息更偏社区反馈与实测体验"
+      "summary": "概要：这篇内容围绕「Show HN: The Mog Programming Language」展开，主要在讲：提供工具调用/系统集成能力；涉及记忆层与状态管理；包含权限与安全相关设计。文中提到“Hi, Ted here, creator of Mog. Mog is a sta"
+    },
+    {
+      "source": "Reddit",
+      "id": "rd:1rozrmn",
+      "title": "Fine-tuned Qwen3 SLMs (0.6-8B) beat frontier LLMs on narrow tasks",
+      "description": "We spent a while putting together a systematic comparison of small distilled Qwen3 models (0.6B to 8B) against frontier APIs — GPT-5 nano/mini/5.2, Gemini 2.5 Flash Lite/Flash, Claude Haiku 4.5/Sonnet 4.6/Opus 4.6, Grok 4.1 Fast/Grok 4 — across 9 datasets spanning classification,",
+      "url": "https://i.redd.it/2hh92dguq0og1.png",
+      "metric": "⬆ 367 💬71",
+      "metricValue": 438,
+      "published_at": "2026-03-09T13:09:43.000Z",
+      "score": 53.71,
+      "tags": [
+        "General"
+      ],
+      "summary": "概要：这篇内容围绕「Fine tuned Qwen3 SLMs (0.6 8B) beat fronti」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“We spent a while putting together a system”。信息更偏社区反馈与实测体验"
     },
     {
       "source": "GitHub",
@@ -53,10 +68,10 @@
       "title": "hidai25/eval-view",
       "description": "Proof your AI agent still works. Regression testing with golden baselines, tool-call diffing, and output drift detection. MCP server + Claude Code skills. LangGraph, CrewAI, Anthropic, OpenAI.",
       "url": "https://github.com/hidai25/eval-view",
-      "metric": "⭐ 53",
-      "metricValue": 53,
-      "published_at": "2026-03-09T07:56:05.000Z",
-      "score": 52.79,
+      "metric": "⭐ 61",
+      "metricValue": 61,
+      "published_at": "2026-03-09T22:47:21.000Z",
+      "score": 53.51,
       "tags": [
         "MCP",
         "Eval"
@@ -71,7 +86,7 @@
       "url": "https://github.com/MDalamin5/End-to-End-Agentic-Ai-Automation-Lab",
       "metric": "⭐ 50",
       "metricValue": 50,
-      "published_at": "2026-03-08T09:32:23.000Z",
+      "published_at": "2026-03-09T13:00:09.000Z",
       "score": 52.49,
       "tags": [
         "MCP",
@@ -81,124 +96,108 @@
     },
     {
       "source": "Reddit",
-      "id": "rd:1ro52cu",
-      "title": "I classified 3.5M US patents with Nemotron 9B on a single RTX 5090 — then built a free search engine on top",
-      "description": "Patent lawyer here, started coding Dec 2025.\n\n**The pipeline:**\n\n* Downloaded 3.5M US patents (2016-2025) from USPTO PatentsView\n* Loaded everything into a single 74GB SQLite file with FTS5\n* Ran Nemotron 9B locally on RTX 5090 to classify records into 100 tech tags (\\~48 hours)\n",
-      "url": "https://reddit.com/r/LocalLLaMA/comments/1ro52cu/i_classified_35m_us_patents_with_nemotron_9b_on_a/",
-      "metric": "⬆ 323 💬101",
-      "metricValue": 424,
-      "published_at": "2026-03-08T13:36:16.000Z",
-      "score": 51.54,
+      "id": "rd:1rp3vku",
+      "title": "Anthropic sues Trump administration over Pentagon blacklist",
+      "description": "",
+      "url": "https://www.cnbc.com/2026/03/09/anthropic-trump-claude-ai-supply-chain-risk.html",
+      "metric": "⬆ 455 💬34",
+      "metricValue": 489,
+      "published_at": "2026-03-09T15:51:27.000Z",
+      "score": 52.28,
       "tags": [
         "General"
       ],
-      "summary": "概要：这篇内容围绕「I classified 3.5M US patents with Nemotron」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Patent lawyer here, started coding Dec 202”。信息更偏社区反馈与实测体验"
+      "summary": "概要：这篇内容围绕「Anthropic sues Trump administration over P」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Anthropic sues Trump administration over P”。信息更偏社区反馈与实测体验"
+    },
+    {
+      "source": "Reddit",
+      "id": "rd:1rp9tt7",
+      "title": "I am not saying it's Gemma 4, but maybe it's Gemma 4?",
+      "description": "three different tweets combined (today, previous week, year ago)",
+      "url": "https://i.redd.it/kdi0w1xxk2og1.png",
+      "metric": "⬆ 375 💬105",
+      "metricValue": 480,
+      "published_at": "2026-03-09T19:20:49.000Z",
+      "score": 52.19,
+      "tags": [
+        "General"
+      ],
+      "summary": "概要：这篇内容围绕「I am not saying it's Gemma 4, but maybe it」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“three different tweets combined (today, pr”。信息更偏社区反馈与实测体验"
+    },
+    {
+      "source": "Reddit",
+      "id": "rd:1rpajz8",
+      "title": "Anyone else feel like an outsider when AI comes up with family and friends?",
+      "description": "So this is something I've been thinking about a lot lately. I work in tech, do a lot of development, talk to LLMs, and even do some fine tuning. I understand how these models actually work. Whenever I go out though, I hear people talk so negatively about AI.  It's always: \"AI is ",
+      "url": "https://reddit.com/r/LocalLLaMA/comments/1rpajz8/anyone_else_feel_like_an_outsider_when_ai_comes/",
+      "metric": "⬆ 153 💬157",
+      "metricValue": 310,
+      "published_at": "2026-03-09T19:47:14.000Z",
+      "score": 51.91,
+      "tags": [
+        "General"
+      ],
+      "summary": "概要：这篇内容围绕「Anyone else feel like an outsider when AI 」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“So this is something I've been thinking ab”。信息更偏社区反馈与实测体验"
+    },
+    {
+      "source": "Reddit",
+      "id": "rd:1rp4y6n",
+      "title": "Genuinely curious what doors the M5 Ultra will open",
+      "description": "it seems the Bandwidth is catching up, making bigger models more and more usable.",
+      "url": "https://i.redd.it/hbofjnt4q1og1.png",
+      "metric": "⬆ 284 💬111",
+      "metricValue": 395,
+      "published_at": "2026-03-09T16:29:58.000Z",
+      "score": 51.17,
+      "tags": [
+        "General"
+      ],
+      "summary": "概要：这篇内容围绕「Genuinely curious what doors the M5 Ultra 」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“it seems the Bandwidth is catching up, mak”。信息更偏社区反馈与实测体验"
+    },
+    {
+      "source": "Reddit",
+      "id": "rd:1rowp28",
+      "title": "karpathy / autoresearch",
+      "description": "[https://x.com/karpathy/status/2030371219518931079](https://x.com/karpathy/status/2030371219518931079)\n\n\n\n*One day, frontier AI research used to be done by meat computers in between eating, sleeping, having other fun, and synchronizing once in a while using sound wave interconnec",
+      "url": "https://github.com/karpathy/autoresearch",
+      "metric": "⬆ 217 💬76",
+      "metricValue": 293,
+      "published_at": "2026-03-09T10:36:24.000Z",
+      "score": 49.62,
+      "tags": [
+        "General"
+      ],
+      "summary": "概要：这篇内容围绕「karpathy / autoresearch」展开，主要在讲：含研究视角与方法论信号。文中提到“[ One day, frontier AI research used to be”。信息更偏社区反馈与实测体验。"
+    },
+    {
+      "source": "Reddit",
+      "id": "rd:1rpem2x",
+      "title": "A few early (and somewhat vague) LLM benchmark comparisons between the M5 Max Macbook Pro and other laptops - Hardware Canucks",
+      "description": "Source: [https://www.youtube.com/watch?v=xDHZ1bEEeUI](https://www.youtube.com/watch?v=xDHZ1bEEeUI)",
+      "url": "https://www.reddit.com/gallery/1rpem2x",
+      "metric": "⬆ 80 💬51",
+      "metricValue": 131,
+      "published_at": "2026-03-09T22:14:34.000Z",
+      "score": 49.45,
+      "tags": [
+        "Eval"
+      ],
+      "summary": "概要：这篇内容围绕「A few early (and somewhat vague) LLM bench」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Source: [”。信息更偏社区反馈与实测体验。"
     },
     {
       "source": "GitHub",
       "id": "gh:961856693",
       "title": "omerbsezer/Fast-LLM-Agent-MCP",
-      "description": "This repo covers LLM, Agents concepts both theoretically and practically: LangChain & LangGraph, AWS Strands Agents, Google Agent Development Kit, Fundamentals",
+      "description": "This repo covers LLM, Agents, MCP Tools, Skills concepts with sample codes: LangChain & LangGraph, AWS Strands Agents, Google Agent Development Kit, Fundamentals.",
       "url": "https://github.com/omerbsezer/Fast-LLM-Agent-MCP",
       "metric": "⭐ 57",
       "metricValue": 57,
-      "published_at": "2026-03-08T20:42:28.000Z",
+      "published_at": "2026-03-09T09:20:41.000Z",
       "score": 49.16,
       "tags": [
         "MCP"
       ],
-      "summary": "概要：这篇内容围绕「omerbsezer/Fast LLM Agent MCP」展开，主要在讲：提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“This repo covers LLM, Agents concepts both”。信息更偏工程实现与代码能力。"
-    },
-    {
-      "source": "Reddit",
-      "id": "rd:1ro71ou",
-      "title": "The Silent OpenAI Fallback: Why LlamaIndex Might Be Leaking Your \"100% Local\" RAG Data",
-      "description": "*Hey everyone, just caught something genuinely concerning while auditing the architecture of my 100% offline, privacy-first AI system (Sovereign Pair) and I think the localLLaMA community needs to be aware of this.*\n\nIf you are building a Local-First RAG using **LlamaIndex**, dou",
-      "url": "https://reddit.com/r/LocalLLaMA/comments/1ro71ou/the_silent_openai_fallback_why_llamaindex_might/",
-      "metric": "⬆ 124 💬50",
-      "metricValue": 174,
-      "published_at": "2026-03-08T15:02:51.000Z",
-      "score": 48.92,
-      "tags": [
-        "RAG"
-      ],
-      "summary": "概要：这篇内容围绕「The Silent OpenAI Fallback: Why LlamaIndex」展开，主要在讲：关注检索增强与知识组织。文中提到“Hey everyone, just caught something genuin”。信息更偏社区反馈与实测体验。"
-    },
-    {
-      "source": "Reddit",
-      "id": "rd:1ro1ybn",
-      "title": "Anthropic'c Claude found 22 vulnerabilities in Firefox in just two weeks",
-      "description": "",
-      "url": "https://i.redd.it/81yz4h35dhng1.png",
-      "metric": "⬆ 183 💬41",
-      "metricValue": 224,
-      "published_at": "2026-03-08T10:53:35.000Z",
-      "score": 48.23,
-      "tags": [
-        "General"
-      ],
-      "summary": "概要：这篇内容围绕「Anthropic'c Claude found 22 vulnerabilitie」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Anthropic'c Claude found 22 vulnerabilitie”。信息更偏社区反馈与实测体验"
-    },
-    {
-      "source": "HackerNews",
-      "id": "hn:47305149",
-      "title": "Show HN: Mcp2cli – One CLI for every API, 96-99% fewer tokens than native MCP",
-      "description": "Every MCP server injects its full tool schemas into context on every turn — 30 tools costs ~3,600 tokens&#x2F;turn whether the model uses them or not. Over 25 turns with 120 tools, that&#x27;s 362,000 tokens just for schemas.<p>mcp2cli turns any MCP server or OpenAPI spec into a CLI at runtime. The LLM discovers tools on demand:<p><pre><code>    mcp2cli --mcp https:&#x2F;&#x2F;mcp.example.com&#x2F;sse --list             # ~16 tokens&#x2F;tool\n    mcp2cli --mcp https:&#x2F;&#x2F;mcp.example.com&#x2F;sse create-task --help  # ~120 tokens, once\n    mcp2cli --mcp https:&#x2F;&#x2F;mcp.example.com&#x2F;sse create-task --title &quot;Fix bug&quot;\n</code></pre>\nNo codegen, no rebuild when the server changes. Works with any LLM — it&#x27;s just a CLI the model shells out to. Also handles OpenAPI specs (JSON&#x2F;YAML, local or remote) with the same interface.<p>Token savings are real, measured with cl100k_base: 96% for 30 tools over 15 turns, 99% for 120 tools over 25 turns.<p>It also ships as an installable skill for AI coding agents (Claude Code, Cursor, Codex): `npx skills add knowsuchagency&#x2F;mcp2cli --skill mcp2cli`<p>Inspired by Kagan Yilmaz&#x27;s CLI vs MCP analysis and CLIHub.<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;knowsuchagency&#x2F;mcp2cli\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;knowsuchagency&#x2F;mcp2cli</a>",
-      "url": "https://github.com/knowsuchagency/mcp2cli",
-      "metric": "▲27 💬13",
-      "metricValue": 67,
-      "published_at": "2026-03-09T05:18:46.000Z",
-      "score": 47.99,
-      "tags": [
-        "MCP"
-      ],
-      "summary": "概要：这篇内容围绕「Show HN: Mcp2cli – One CLI for every API, 」展开，主要在讲：提供工具调用/系统集成能力。文中提到“Every MCP server injects its full tool sch”。信息更偏行业观点与趋势讨论。"
-    },
-    {
-      "source": "GitHub",
-      "id": "gh:1144764199",
-      "title": "didilili/ai-agents-from-zero",
-      "description": "📚 AI 智能体入门与大模型 LLM 系统实战教程 | 《AI 智能体实战速成指南：从零到企业级落地》 · LangChain / Coze / Dify / MCP / RAG / Agent / 提示词 · 企业级部署与微调",
-      "url": "https://github.com/didilili/ai-agents-from-zero",
-      "metric": "⭐ 44",
-      "metricValue": 44,
-      "published_at": "2026-03-09T05:51:44.000Z",
-      "score": 47.84,
-      "tags": [
-        "MCP",
-        "RAG"
-      ],
-      "summary": "概要：这篇内容围绕「didilili/ai agents from zero」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织。文中提到“📚 AI 智能体入门与大模型 LLM 系统实战教程 《AI 智能体实战速成指南：从”。信息更偏工程实现与代码能力。"
-    },
-    {
-      "source": "Reddit",
-      "id": "rd:1ro7j0b",
-      "title": "Kokoro TTS now hooked to my Claude Code CLI",
-      "description": "I want to share something fun I made with Kokoro TTS while waiting for all the subagents to finish their tasks. Claude Code's notification does not make any sound on my mac, so I let it hooks itself to Kokoro TTS. Very helpful when she explains what she is doing, and her sass rea",
-      "url": "https://v.redd.it/9antrjuc9ung1",
-      "metric": "⬆ 114 💬22",
-      "metricValue": 136,
-      "published_at": "2026-03-08T15:22:23.000Z",
-      "score": 47.64,
-      "tags": [
-        "General"
-      ],
-      "summary": "概要：这篇内容围绕「Kokoro TTS now hooked to my Claude Code CL」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“I want to share something fun I made with ”。信息更偏社区反馈与实测体验"
-    },
-    {
-      "source": "Reddit",
-      "id": "rd:1rodx13",
-      "title": "My first setup for local ai",
-      "description": "Thanks to TheAhmadOsman buy a gpu movement, I to got myself a decent starter setup \nSpecs:\n2x 3090er (evga and gainward phoenix)\nRam: 96gb  ddr5 corsair Vengeance \nRyzen 9 9950x\nASUS ProArt X870E-CREATOR WIFI\nbe quite 1600 w\nFractal meshify 2xl\nSsd 2tb\nSsd 4tb\n6 noctuas inside\n\nT",
-      "url": "https://www.reddit.com/gallery/1rodx13",
-      "metric": "⬆ 148 💬49",
-      "metricValue": 197,
-      "published_at": "2026-03-08T19:27:45.000Z",
-      "score": 47.56,
-      "tags": [
-        "General"
-      ],
-      "summary": "概要：这篇内容围绕「My first setup for local ai」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Thanks to TheAhmadOsman buy a gpu movement”。信息更偏社区反馈与实测体验。"
+      "summary": "概要：这篇内容围绕「omerbsezer/Fast LLM Agent MCP」展开，主要在讲：提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“This repo covers LLM, Agents, MCP Tools, S”。信息更偏工程实现与代码能力。"
     }
   ]
 }
