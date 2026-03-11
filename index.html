@@ -28,132 +28,140 @@
 <div class="layout">
   <aside class="sidebar">
     <div class="brand">Agent Tech Daily</div>
-    <div class="meta">日期：2026-03-10<br/>更新：2026-03-10T08:00:09.090Z<br/>来源：GitHub / HackerNews / Reddit</div>
+    <div class="meta">日期：2026-03-11<br/>更新：2026-03-11T08:00:06.555Z<br/>来源：GitHub / Reddit</div>
   </aside>
   <main class="main">
     <section class="card">
       <h1 style="margin:0 0 8px;">多源智能体技术日报</h1>
       <div class="meta">不只 GitHub，自动聚合 Hacker News / Reddit / arXiv 热点。</div>
-      <div style="margin-top:10px;"><button class="chip active" data-source="ALL">ALL</button><button class="chip " data-source="GitHub">GitHub</button><button class="chip " data-source="HackerNews">HackerNews</button><button class="chip " data-source="Reddit">Reddit</button></div>
+      <div style="margin-top:10px;"><button class="chip active" data-source="ALL">ALL</button><button class="chip " data-source="GitHub">GitHub</button><button class="chip " data-source="Reddit">Reddit</button></div>
     </section>
 
     <section id="latest">
       
     <article class="card repo-item" id="item-1" data-tags="MCP,Persona" data-source="GitHub">
       <a class="repo-title" href="https://github.com/doobidoo/mcp-memory-service" target="_blank" rel="noreferrer">1. doobidoo/mcp-memory-service</a>
-      <div class="repo-meta">来源 GitHub · 热度 ⭐ 1488 · 时间 2026-03-08</div>
+      <div class="repo-meta">来源 GitHub · 热度 ⭐ 1498 · 时间 2026-03-11</div>
       <div class="tags"><span class="tag">MCP</span><span class="tag">Persona</span></div>
       <div class="repo-desc">Open-source persistent memory for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude. REST API + knowledge graph + autonomous consolidation.</div>
       <div class="repo-summary">概要：这篇内容围绕「doobidoo/mcp memory service」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；涉及记忆层与状态管理。文中提到“Open source persistent memory for AI agent”。信息更偏工程实现</div>
     </article>
   
 
-    <article class="card repo-item" id="item-2" data-tags="Persona" data-source="HackerNews">
-      <a class="repo-title" href="https://moglang.org" target="_blank" rel="noreferrer">2. Show HN: The Mog Programming Language</a>
-      <div class="repo-meta">来源 HackerNews · 热度 ▲145 💬70 · 时间 2026-03-09</div>
-      <div class="tags"><span class="tag">Persona</span></div>
-      <div class="repo-desc">Hi, Ted here, creator of Mog.<p>- Mog is a statically typed, compiled, embedded language (think statically typed Lua) designed to be written by LLMs -- the full spec fits in 3,200 tokens.
-- An AI agent writes a Mog program, compiles it, and dynamically loads it as a plugin, script, or hook.
-- The host controls exactly which functions a Mog program can call (capability-based permissions), so permissions propagate from agent to agent-written code.
-- Compiled to native code for low-latency plugin execution -- no interpreter overhead, no JIT, no process startup cost.
-- The compiler is written in safe Rust so the entire toolchain can be audited for security. Even without a full security audit, Mog is already useful for agents extending themselves with their own code.
-- MIT licensed, contributions welcome.<p>Motivations for Mog:<p>1. Syntax Only an AI Could Love: Mog is written for AIs to write, so the spec fits easily in context (~3200 tokens), and it&#x27;s intended to minimize foot-guns to lower the error rate when generating Mog code. This is why Mog has no operator precedence: non-associative operations have to use parentheses, e.g.  (a + b) * c. It&#x27;s also why there&#x27;s no implicit type coercion, which I&#x27;ve found over the decades to be an annoying source of runtime bugs. There&#x27;s also less support in Mog for generics, and there&#x27;s absolutely no support for metaprogramming, macros, or syntactic abstraction.<p>When asking people to write code in a language, these restrictions could be onerous. But LLMs don&#x27;t care, and the less expressivity you trust them with, the better.<p>2. Capabilities-Based Permissionsl: There&#x27;s a paradox with existing security models for AI agents. If you give an agent like OpenClaw unfettered access to your data, that&#x27;s insecure and you&#x27;ll get pwned. But if you sandbox it, it can&#x27;t do most of what you want. Worse, if you run scripts the agent wrote, those scripts don&#x27;t inherit the permissions that constrain the agent&#x27;s own bash tool calls, which leads to pwnage and other chaos. And that&#x27;s not even assuming you run one of the many OpenClaw plugins with malware.<p>Mog tries to solve this by taking inspiration from embedded languages. It compiles all the way to machine code, ahead of time, but the compiler doesn&#x27;t output any dangerous code (at least it shouldn&#x27;t -- Mog is quite new, so that could still be buggy). This allows a host program, such as an AI agent, to generate Mog source code, compile it, and load it into itself using dlopen(), while maintaining security guarantees.<p>The main trick is that a Mog program on its own can&#x27;t do much. It has no direct access to syscalls, libc, or memory. It can basically call functions, do heap allocations (but only within the arena the host gives it), and return something. If the host wants the Mog program to be able to do I&#x2F;O, it has to supply the functions that the Mog program will call. A core invariant is that a Mog program should never be able to crash the host program, corrupt its state, or consume more resources than the host allows.<p>This allows the host to inspect the arguments to any potentially dangerous operation that the Mog program attempts, since it&#x27;s code that runs in the host. For example, a host agent could give a Mog program a function to run a bash command, then enforce its own session-level permissions on that command, even though the command was dynamically generated by a plugin that was written without prior knowledge of those permission settings.<p>(There are a couple other tricks that PL people might find interesting. One is that the host can limit the execution time of the guest program. It does this using cooperative interrupt polling, i.e. the compiler inserts runtime checks that check if the host has asked the guest to stop. This causes a roughly 10% drop in performance on extremely tight loops, which are the worst case. It could almost certainly be optimized.)<p>3.  Self Modification Without Restart: When I try to modify my OpenClaw from my phone, I have to restart the whole agent. Mog fixes this: an agent can compile and run new plugins without interrupting a session, which makes it dynamically responsive to user feedback (e.g., you tell it to always ask you before deleting a file and without any interruption it compiles and loads the code to... actually do that).<p>Async support is built into the language, by adapting LLVM&#x27;s coroutine lowering to our Rust port of the QBE compiler, which is what Mog uses for compilation. The Mog host library can be slotted into an async event loop (tested with Bun), so Mog async calls get scheduled seamlessly by the agent&#x27;s event loop.
-Another trick is that the Mog program uses a stack inside the memory arena that the host provides for it to run in, rather than the system stack. The system tracks a guard page between the stack and heap. This design prevents stack overflow without runtime overhead.<p>Lots of work still needs to be done to make Mog a &quot;batteries-included&quot; experience like Python. Most of that work involves fleshing out a standard library to include things like JSON, CSV, Sqlite, and HTTP. One high-impact addition would be an `llm` library that allows the guest to make LLM calls through the agent, which should support multiple models and token budgeting, so the host could prevent the plugin from burning too many tokens.<p>I suspect we&#x27;ll also want to do more work to make the program lifecycle operations more ergonomic. And finally, there should be a more fully featured library for integrating a Mog host into an AI agent like OpenClaw or OpenAI&#x27;s Codex CLI.</div>
-      <div class="repo-summary">概要：这篇内容围绕「Show HN: The Mog Programming Language」展开，主要在讲：提供工具调用/系统集成能力；涉及记忆层与状态管理；包含权限与安全相关设计。文中提到“Hi, Ted here, creator of Mog. Mog is a sta</div>
-    </article>
-  
-
-    <article class="card repo-item" id="item-3" data-tags="General" data-source="Reddit">
-      <a class="repo-title" href="https://i.redd.it/2hh92dguq0og1.png" target="_blank" rel="noreferrer">3. Fine-tuned Qwen3 SLMs (0.6-8B) beat frontier LLMs on narrow tasks</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 367 💬71 · 时间 2026-03-09</div>
+    <article class="card repo-item" id="item-2" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://www.reddit.com/gallery/1rq2ukc" target="_blank" rel="noreferrer">2. This guy 🤡</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 1101 💬376 · 时间 2026-03-10</div>
       <div class="tags"><span class="tag">General</span></div>
-      <div class="repo-desc">We spent a while putting together a systematic comparison of small distilled Qwen3 models (0.6B to 8B) against frontier APIs — GPT-5 nano/mini/5.2, Gemini 2.5 Flash Lite/Flash, Claude Haiku 4.5/Sonnet 4.6/Opus 4.6, Grok 4.1 Fast/Grok 4 — across 9 datasets spanning classification,</div>
-      <div class="repo-summary">概要：这篇内容围绕「Fine tuned Qwen3 SLMs (0.6 8B) beat fronti」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“We spent a while putting together a system”。信息更偏社区反馈与实测体验</div>
+      <div class="repo-desc">At least T3 Code is open-source/MIT licensed.</div>
+      <div class="repo-summary">概要：这篇内容围绕「This guy 🤡」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“At least T3 Code is open source/MIT licens”。信息更偏社区反馈与实测体验。</div>
     </article>
   
 
-    <article class="card repo-item" id="item-4" data-tags="MCP,Eval" data-source="GitHub">
-      <a class="repo-title" href="https://github.com/hidai25/eval-view" target="_blank" rel="noreferrer">4. hidai25/eval-view</a>
-      <div class="repo-meta">来源 GitHub · 热度 ⭐ 61 · 时间 2026-03-09</div>
+    <article class="card repo-item" id="item-3" data-tags="Eval" data-source="Reddit">
+      <a class="repo-title" href="https://www.reddit.com/gallery/1rpxpsa" target="_blank" rel="noreferrer">3. How I topped the Open LLM Leaderboard using 2x 4090 GPUs — no weights modified.</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 497 💬107 · 时间 2026-03-10</div>
+      <div class="tags"><span class="tag">Eval</span></div>
+      <div class="repo-desc">Hi LocalLLaMAs,
+
+A few years ago, I found that duplicating a specific block of 7 middle layers in Qwen2-72B, without modifying any weights, improved performance across all Open LLM Leaderboard benchmarks and took #1. As of 2026, the top 4 models on that leaderboard are still desc</div>
+      <div class="repo-summary">概要：这篇内容围绕「How I topped the Open LLM Leaderboard usin」展开，主要在讲：强调评测对比与稳定性验证。文中提到“Hi LocalLLaMAs, A few years ago, I found t”。信息更偏社区反馈与实测体验。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-4" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rq8ijl/i_regret_ever_finding_localllama/" target="_blank" rel="noreferrer">4. I regret ever finding LocalLLaMA</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 807 💬144 · 时间 2026-03-10</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc">It all started with using "the AI" to help me study for a big exam. Can it make some flashcards or questions?
+
+Then Gemini. Big context, converting PDFs, using markdown, custom system instruction on Ai Studio, API.
+
+Then LM Studio. We can run this locally???
+
+Then LocalLLama. Now</div>
+      <div class="repo-summary">概要：这篇内容围绕「I regret ever finding LocalLLaMA」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“It all started with using "the AI" to help”。信息更偏社区反馈与实测体验。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-5" data-tags="Persona" data-source="Reddit">
+      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rq7jtm/qwen3535ba3b_uncensored_aggressive_gguf_release/" target="_blank" rel="noreferrer">5. Qwen3.5-35B-A3B Uncensored (Aggressive) — GGUF Release</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 482 💬117 · 时间 2026-03-10</div>
+      <div class="tags"><span class="tag">Persona</span></div>
+      <div class="repo-desc">The one everyone's been asking for. Qwen3.5-35B-A3B Aggressive is out!
+
+Aggressive = no refusals; it has NO personality changes/alterations or any of that, it is the ORIGINAL release of Qwen just completely uncensored
+
+[https://huggingface.co/HauhauCS/Qwen3.5-35B-A3B-Uncensored-H</div>
+      <div class="repo-summary">概要：这篇内容围绕「Qwen3.5 35B A3B Uncensored (Aggressive) — 」展开，主要在讲：发布了新的能力或版本。文中提到“The one everyone's been asking for. Qwen3.”。信息更偏社区反馈与实测体验。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-6" data-tags="MCP,Eval" data-source="GitHub">
+      <a class="repo-title" href="https://github.com/hidai25/eval-view" target="_blank" rel="noreferrer">6. hidai25/eval-view</a>
+      <div class="repo-meta">来源 GitHub · 热度 ⭐ 62 · 时间 2026-03-10</div>
       <div class="tags"><span class="tag">MCP</span><span class="tag">Eval</span></div>
       <div class="repo-desc">Proof your AI agent still works. Regression testing with golden baselines, tool-call diffing, and output drift detection. MCP server + Claude Code skills. LangGraph, CrewAI, Anthropic, OpenAI.</div>
       <div class="repo-summary">概要：这篇内容围绕「hidai25/eval view」展开，主要在讲：强调评测对比与稳定性验证；提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“Proof your AI agent still works. Regressio”。信息更偏工程实现与代码能力</div>
     </article>
   
 
-    <article class="card repo-item" id="item-5" data-tags="MCP,RAG" data-source="GitHub">
-      <a class="repo-title" href="https://github.com/MDalamin5/End-to-End-Agentic-Ai-Automation-Lab" target="_blank" rel="noreferrer">5. MDalamin5/End-to-End-Agentic-Ai-Automation-Lab</a>
-      <div class="repo-meta">来源 GitHub · 热度 ⭐ 50 · 时间 2026-03-09</div>
-      <div class="tags"><span class="tag">MCP</span><span class="tag">RAG</span></div>
-      <div class="repo-desc">This repository contains hands-on projects, code examples, and deployment workflows. Explore multi-agent systems, LangChain, LangGraph, AutoGen, CrewAI, RAG, MCP, automation with n8n, and scalable agent deployment using Docker, AWS, and BentoML.</div>
-      <div class="repo-summary">概要：这篇内容围绕「MDalamin5/End to End Agentic Ai Automation」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；支持多智能体编排与流程化落地。文中提到“This repository contains hands on</div>
-    </article>
-  
-
-    <article class="card repo-item" id="item-6" data-tags="General" data-source="Reddit">
-      <a class="repo-title" href="https://www.cnbc.com/2026/03/09/anthropic-trump-claude-ai-supply-chain-risk.html" target="_blank" rel="noreferrer">6. Anthropic sues Trump administration over Pentagon blacklist</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 455 💬34 · 时间 2026-03-09</div>
-      <div class="tags"><span class="tag">General</span></div>
-      <div class="repo-desc"></div>
-      <div class="repo-summary">概要：这篇内容围绕「Anthropic sues Trump administration over P」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Anthropic sues Trump administration over P”。信息更偏社区反馈与实测体验</div>
-    </article>
-  
-
     <article class="card repo-item" id="item-7" data-tags="General" data-source="Reddit">
-      <a class="repo-title" href="https://i.redd.it/kdi0w1xxk2og1.png" target="_blank" rel="noreferrer">7. I am not saying it's Gemma 4, but maybe it's Gemma 4?</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 375 💬105 · 时间 2026-03-09</div>
+      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rq0our/we_need_a_minimum_karma_rule_for_commenting_and/" target="_blank" rel="noreferrer">7. We need a minimum karma rule for commenting and posting</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 266 💬110 · 时间 2026-03-10</div>
       <div class="tags"><span class="tag">General</span></div>
-      <div class="repo-desc">three different tweets combined (today, previous week, year ago)</div>
-      <div class="repo-summary">概要：这篇内容围绕「I am not saying it's Gemma 4, but maybe it」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“three different tweets combined (today, pr”。信息更偏社区反馈与实测体验</div>
+      <div class="repo-desc">so many slop bots here. it’s becoming a kindergarten for openclaws. bots responding to bots.</div>
+      <div class="repo-summary">概要：这篇内容围绕「We need a minimum karma rule for commentin」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“so many slop bots here. it’s becoming a ki”。信息更偏社区反馈与实测体验</div>
     </article>
   
 
-    <article class="card repo-item" id="item-8" data-tags="General" data-source="Reddit">
-      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rpajz8/anyone_else_feel_like_an_outsider_when_ai_comes/" target="_blank" rel="noreferrer">8. Anyone else feel like an outsider when AI comes up with family and friends?</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 153 💬157 · 时间 2026-03-09</div>
-      <div class="tags"><span class="tag">General</span></div>
-      <div class="repo-desc">So this is something I've been thinking about a lot lately. I work in tech, do a lot of development, talk to LLMs, and even do some fine tuning. I understand how these models actually work. Whenever I go out though, I hear people talk so negatively about AI.  It's always: "AI is </div>
-      <div class="repo-summary">概要：这篇内容围绕「Anyone else feel like an outsider when AI 」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“So this is something I've been thinking ab”。信息更偏社区反馈与实测体验</div>
-    </article>
-  
-
-    <article class="card repo-item" id="item-9" data-tags="General" data-source="Reddit">
-      <a class="repo-title" href="https://i.redd.it/hbofjnt4q1og1.png" target="_blank" rel="noreferrer">9. Genuinely curious what doors the M5 Ultra will open</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 284 💬111 · 时间 2026-03-09</div>
-      <div class="tags"><span class="tag">General</span></div>
-      <div class="repo-desc">it seems the Bandwidth is catching up, making bigger models more and more usable.</div>
-      <div class="repo-summary">概要：这篇内容围绕「Genuinely curious what doors the M5 Ultra 」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“it seems the Bandwidth is catching up, mak”。信息更偏社区反馈与实测体验</div>
-    </article>
-  
-
-    <article class="card repo-item" id="item-10" data-tags="General" data-source="Reddit">
-      <a class="repo-title" href="https://github.com/karpathy/autoresearch" target="_blank" rel="noreferrer">10. karpathy / autoresearch</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 217 💬76 · 时间 2026-03-09</div>
-      <div class="tags"><span class="tag">General</span></div>
-      <div class="repo-desc">[https://x.com/karpathy/status/2030371219518931079](https://x.com/karpathy/status/2030371219518931079)
-
-
-
-*One day, frontier AI research used to be done by meat computers in between eating, sleeping, having other fun, and synchronizing once in a while using sound wave interconnec</div>
-      <div class="repo-summary">概要：这篇内容围绕「karpathy / autoresearch」展开，主要在讲：含研究视角与方法论信号。文中提到“[ One day, frontier AI research used to be”。信息更偏社区反馈与实测体验。</div>
-    </article>
-  
-
-    <article class="card repo-item" id="item-11" data-tags="Eval" data-source="Reddit">
-      <a class="repo-title" href="https://www.reddit.com/gallery/1rpem2x" target="_blank" rel="noreferrer">11. A few early (and somewhat vague) LLM benchmark comparisons between the M5 Max Macbook Pro and other laptops - Hardware Canucks</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 80 💬51 · 时间 2026-03-09</div>
+    <article class="card repo-item" id="item-8" data-tags="Eval" data-source="Reddit">
+      <a class="repo-title" href="https://v.redd.it/fbh8py3srcog1" target="_blank" rel="noreferrer">8. New benchmark just dropped.</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 198 💬32 · 时间 2026-03-11</div>
       <div class="tags"><span class="tag">Eval</span></div>
-      <div class="repo-desc">Source: [https://www.youtube.com/watch?v=xDHZ1bEEeUI](https://www.youtube.com/watch?v=xDHZ1bEEeUI)</div>
-      <div class="repo-summary">概要：这篇内容围绕「A few early (and somewhat vague) LLM bench」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Source: [”。信息更偏社区反馈与实测体验。</div>
+      <div class="repo-desc">Write the complete  Three.js code for a scene featuring Michael Jackson, Pepe the Frog, Donald Trump, and Elon Musk performing the "Thriller" choreography, aiming for maximum visual perfection, detailed animation, lighting, high-quality rendering, and an overall  cinematic.</div>
+      <div class="repo-summary">概要：这篇内容围绕「New benchmark just dropped.」展开，主要在讲：强调评测对比与稳定性验证。文中提到“Write the complete Three.js code for a sce”。信息更偏社区反馈与实测体验。</div>
     </article>
   
 
-    <article class="card repo-item" id="item-12" data-tags="MCP" data-source="GitHub">
-      <a class="repo-title" href="https://github.com/omerbsezer/Fast-LLM-Agent-MCP" target="_blank" rel="noreferrer">12. omerbsezer/Fast-LLM-Agent-MCP</a>
-      <div class="repo-meta">来源 GitHub · 热度 ⭐ 57 · 时间 2026-03-09</div>
-      <div class="tags"><span class="tag">MCP</span></div>
-      <div class="repo-desc">This repo covers LLM, Agents, MCP Tools, Skills concepts with sample codes: LangChain & LangGraph, AWS Strands Agents, Google Agent Development Kit, Fundamentals.</div>
-      <div class="repo-summary">概要：这篇内容围绕「omerbsezer/Fast LLM Agent MCP」展开，主要在讲：提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“This repo covers LLM, Agents, MCP Tools, S”。信息更偏工程实现与代码能力。</div>
+    <article class="card repo-item" id="item-9" data-tags="Eval" data-source="Reddit">
+      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rpw17y/ryzen_ai_max_395_128gb_qwen_35_35b122b_benchmarks/" target="_blank" rel="noreferrer">9. Ryzen AI Max 395+ 128GB - Qwen 3.5 35B/122B Benchmarks (100k-250K Context)  + Others (MoE)</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 138 💬83 · 时间 2026-03-10</div>
+      <div class="tags"><span class="tag">Eval</span></div>
+      <div class="repo-desc">Hey everyone,
+
+Finally got my Framework Desktop! I've never used Linux before but it was dead simple to get Fedora up and running with the recommended toolboxes (big thanks to the amazing community here).
+
+Seen a lot of benchmarks recently but they're all targeting small context </div>
+      <div class="repo-summary">概要：这篇内容围绕「Ryzen AI Max 395+ 128GB Qwen 3.5 35B/122B 」展开，主要在讲：强调评测对比与稳定性验证。文中提到“Hey everyone, Finally got my Framework Des”。信息更偏社区反馈与实测体验。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-10" data-tags="Eval" data-source="Reddit">
+      <a class="repo-title" href="https://reddit.com/r/MachineLearning/comments/1rq6g08/how_i_topped_the_open_llm_leaderboard_using_2x/" target="_blank" rel="noreferrer">10. How I topped the Open LLM Leaderboard using 2x 4090 GPUs - Research notes in Blog form</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 129 💬19 · 时间 2026-03-10</div>
+      <div class="tags"><span class="tag">Eval</span></div>
+      <div class="repo-desc">A few years ago, I found that duplicating a specific block of 7 middle layers in Qwen2-72B, without modifying any weights, improved performance across all Open LLM Leaderboard benchmarks and took #1 place. As of 2026, the top 4 models on that leaderboard are still descendants.
+
+T</div>
+      <div class="repo-summary">概要：这篇内容围绕「How I topped the Open LLM Leaderboard usin」展开，主要在讲：强调评测对比与稳定性验证。文中提到“A few years ago, I found that duplicating ”。信息更偏社区反馈与实测体验。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-11" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rptdpl/fish_audio_releases_s2_opensource_controllable/" target="_blank" rel="noreferrer">11. Fish Audio Releases S2: open-source, controllable and expressive TTS model</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 233 💬64 · 时间 2026-03-10</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc">Fish Audio is open-sourcing S2, where you can direct voices for maximum expressivity with precision using natural language emotion tags like \[whispers sweetly\] or \[laughing nervously\]. You can generate multi-speaker dialogue in one pass, time-to-first-audio is 100ms, and 80+ </div>
+      <div class="repo-summary">概要：这篇内容围绕「Fish Audio Releases S2: open source, contr」展开，主要在讲：发布了新的能力或版本。文中提到“Fish Audio is open sourcing S2, where you ”。信息更偏社区反馈与实测体验。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-12" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://github.com/ggml-org/llama.cpp/commit/26c084662903ddaca19bef982831bfb0856e8257" target="_blank" rel="noreferrer">12. Happy birthday, llama.cpp!</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 274 💬14 · 时间 2026-03-10</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc">I remember when the original llama models leaked from Meta and torrenting them onto my PC to try llama.cpp out. Despite it being really stupid and hardly getting a couple tokens per second in a template-less completion mode, I was shocked. You could really feel the ground shiftin</div>
+      <div class="repo-summary">概要：这篇内容围绕「Happy birthday, llama.cpp!」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“I remember when the original llama models ”。信息更偏社区反馈与实测体验。</div>
     </article>
   
     </section>
@@ -161,13 +169,14 @@ Another trick is that the Mog program uses a stack inside the memory arena that 
     <section class="card">
       <h2 style="margin-top:0;">技术负责人视角（本日Top3落地建议）</h2>
       <ul><li><b>1. doobidoo/mcp-memory-service</b>（GitHub）：本周安排 0.5~1 天验证并纳入周报追踪。</li>
-<li><b>2. Show HN: The Mog Programming Language</b>（HackerNews）：本周安排 0.5~1 天验证并纳入周报追踪。</li>
-<li><b>3. Fine-tuned Qwen3 SLMs (0.6-8B) beat frontier LLMs on narrow tasks</b>（Reddit）：本周安排 0.5~1 天验证并纳入周报追踪。</li></ul>
+<li><b>2. This guy 🤡</b>（Reddit）：本周安排 0.5~1 天验证并纳入周报追踪。</li>
+<li><b>3. How I topped the Open LLM Leaderboard using 2x 4090 GPUs — no weights modified.</b>（Reddit）：本周安排 0.5~1 天验证并纳入周报追踪。</li></ul>
     </section>
 
     <section class="card">
       <h2 style="margin-top:0;">历史归档</h2>
-      <ul><li><a href="../memory/agent-tech-daily/2026-03-10.md">2026-03-10</a></li>
+      <ul><li><a href="../memory/agent-tech-daily/2026-03-11.md">2026-03-11</a></li>
+<li><a href="../memory/agent-tech-daily/2026-03-10.md">2026-03-10</a></li>
 <li><a href="../memory/agent-tech-daily/2026-03-09.md">2026-03-09</a></li>
 <li><a href="../memory/agent-tech-daily/2026-03-08.md">2026-03-08</a></li>
 <li><a href="../memory/agent-tech-daily/2026-03-07.md">2026-03-07</a></li></ul>
