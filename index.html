@@ -28,140 +28,146 @@
 <div class="layout">
   <aside class="sidebar">
     <div class="brand">Agent Tech Daily</div>
-    <div class="meta">日期：2026-03-11<br/>更新：2026-03-11T08:00:06.555Z<br/>来源：GitHub / Reddit</div>
+    <div class="meta">日期：2026-03-12<br/>更新：2026-03-12T08:00:07.410Z<br/>来源：GitHub / Reddit / HackerNews</div>
   </aside>
   <main class="main">
     <section class="card">
       <h1 style="margin:0 0 8px;">多源智能体技术日报</h1>
       <div class="meta">不只 GitHub，自动聚合 Hacker News / Reddit / arXiv 热点。</div>
-      <div style="margin-top:10px;"><button class="chip active" data-source="ALL">ALL</button><button class="chip " data-source="GitHub">GitHub</button><button class="chip " data-source="Reddit">Reddit</button></div>
+      <div style="margin-top:10px;"><button class="chip active" data-source="ALL">ALL</button><button class="chip " data-source="GitHub">GitHub</button><button class="chip " data-source="Reddit">Reddit</button><button class="chip " data-source="HackerNews">HackerNews</button></div>
     </section>
 
     <section id="latest">
       
     <article class="card repo-item" id="item-1" data-tags="MCP,Persona" data-source="GitHub">
       <a class="repo-title" href="https://github.com/doobidoo/mcp-memory-service" target="_blank" rel="noreferrer">1. doobidoo/mcp-memory-service</a>
-      <div class="repo-meta">来源 GitHub · 热度 ⭐ 1498 · 时间 2026-03-11</div>
+      <div class="repo-meta">来源 GitHub · 热度 ⭐ 1510 · 时间 2026-03-11</div>
       <div class="tags"><span class="tag">MCP</span><span class="tag">Persona</span></div>
       <div class="repo-desc">Open-source persistent memory for AI agent pipelines (LangGraph, CrewAI, AutoGen) and Claude. REST API + knowledge graph + autonomous consolidation.</div>
       <div class="repo-summary">概要：这篇内容围绕「doobidoo/mcp memory service」展开，主要在讲：提供工具调用/系统集成能力；关注检索增强与知识组织；涉及记忆层与状态管理。文中提到“Open source persistent memory for AI agent”。信息更偏工程实现</div>
     </article>
   
 
-    <article class="card repo-item" id="item-2" data-tags="General" data-source="Reddit">
-      <a class="repo-title" href="https://www.reddit.com/gallery/1rq2ukc" target="_blank" rel="noreferrer">2. This guy 🤡</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 1101 💬376 · 时间 2026-03-10</div>
-      <div class="tags"><span class="tag">General</span></div>
-      <div class="repo-desc">At least T3 Code is open-source/MIT licensed.</div>
-      <div class="repo-summary">概要：这篇内容围绕「This guy 🤡」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“At least T3 Code is open source/MIT licens”。信息更偏社区反馈与实测体验。</div>
+    <article class="card repo-item" id="item-2" data-tags="Eval" data-source="Reddit">
+      <a class="repo-title" href="https://i.redd.it/4koejumaidog1.jpeg" target="_blank" rel="noreferrer">2. M5 Max just arrived - benchmarks incoming</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 1872 💬298 · 时间 2026-03-11</div>
+      <div class="tags"><span class="tag">Eval</span></div>
+      <div class="repo-desc">The M5 Max 128GB 14" has just arrived. I've been looking forward to putting this through its paces. Testing begins now. Results will be posted as comments below — no video, no lengthy writeup, just the raw numbers. Clean and simple.
+
+Apologies for the delay. I initially ran the t</div>
+      <div class="repo-summary">概要：这篇内容围绕「M5 Max just arrived benchmarks incoming」展开，主要在讲：强调评测对比与稳定性验证。文中提到“The M5 Max 128GB 14" has just arrived. I'v”。信息更偏社区反馈与实测体验。</div>
     </article>
   
 
-    <article class="card repo-item" id="item-3" data-tags="Eval" data-source="Reddit">
-      <a class="repo-title" href="https://www.reddit.com/gallery/1rpxpsa" target="_blank" rel="noreferrer">3. How I topped the Open LLM Leaderboard using 2x 4090 GPUs — no weights modified.</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 497 💬107 · 时间 2026-03-10</div>
-      <div class="tags"><span class="tag">Eval</span></div>
-      <div class="repo-desc">Hi LocalLLaMAs,
-
-A few years ago, I found that duplicating a specific block of 7 middle layers in Qwen2-72B, without modifying any weights, improved performance across all Open LLM Leaderboard benchmarks and took #1. As of 2026, the top 4 models on that leaderboard are still desc</div>
-      <div class="repo-summary">概要：这篇内容围绕「How I topped the Open LLM Leaderboard usin」展开，主要在讲：强调评测对比与稳定性验证。文中提到“Hi LocalLLaMAs, A few years ago, I found t”。信息更偏社区反馈与实测体验。</div>
+    <article class="card repo-item" id="item-3" data-tags="MCP,Eval" data-source="HackerNews">
+      <a class="repo-title" href="https://github.com/theredsix/agent-browser-protocol" target="_blank" rel="noreferrer">3. Show HN: Open-source browser for AI agents</a>
+      <div class="repo-meta">来源 HackerNews · 热度 ▲123 💬41 · 时间 2026-03-11</div>
+      <div class="tags"><span class="tag">MCP</span><span class="tag">Eval</span></div>
+      <div class="repo-desc">Hi HN, I forked chromium and built agent-browser-protocol (ABP) after noticing that most browser-agent failures aren’t really about the model misunderstanding the page. Instead, the problem is that the model is reasoning from a stale state.<p>ABP is designed to keep the acting agent synchronized with the browser at every step. After each action (click, type, etc), it freezes JavaScript execution and rendering, then captures the resulting state. It also compiles the notable events that occurred during that action loop, such as navigation, file pickers, permission prompts, alerts, and downloads, and sends that along with a screenshot of the frozen page state back to the agent.<p>The result is that browser interaction starts to feel more like a multimodal chat loop. The agent takes an action, gets back a fresh visual state and a structured summary of what happened, then decides what to do next from there. That fits much better with how LLMs already work.<p>A few common browser-use failures ABP helps eliminate:
+* A modal appears after the last Playwright screenshot and blocks the input the agent was about to use
+* Dynamic filters cause the page to reflow between steps
+* An autocomplete dropdown opens and covers the element the agent intended to click
+* alert() &#x2F; confirm() interrupts the flow
+* Downloads are triggered, but the agent has no reliable way to know when they’ve completed<p>As proof, ABP with opus 4.6 as the driver scores 90.5% on the Online Mind2Web benchmark. I think modern LLMs already understand websites, they just need a better tool to interact with them. Happy to answer questions about the architecture, forking chrome or anything else in the comments below.<p>Try it out: `claude mcp add browser -- npx -y agent-browser-protocol --mcp` (Codex&#x2F;OpenCode instructions in the docs)<p>Demo video: <a href="https:&#x2F;&#x2F;www.loom.com&#x2F;share&#x2F;387f6349196f417d8b4b16a5452c3369" rel="nofollow">https:&#x2F;&#x2F;www.loom.com&#x2F;share&#x2F;387f6349196f417d8b4b16a5452c3369</a></div>
+      <div class="repo-summary">概要：这篇内容围绕「Show HN: Open source browser for AI agents」展开，主要在讲：强调评测对比与稳定性验证；涉及记忆层与状态管理；包含权限与安全相关设计。文中提到“Hi HN, I forked chromium and built age</div>
     </article>
   
 
     <article class="card repo-item" id="item-4" data-tags="General" data-source="Reddit">
-      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rq8ijl/i_regret_ever_finding_localllama/" target="_blank" rel="noreferrer">4. I regret ever finding LocalLLaMA</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 807 💬144 · 时间 2026-03-10</div>
+      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rqy3cx/nemotron_3_super_released/" target="_blank" rel="noreferrer">4. Nemotron 3 Super Released</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 375 💬152 · 时间 2026-03-11</div>
       <div class="tags"><span class="tag">General</span></div>
-      <div class="repo-desc">It all started with using "the AI" to help me study for a big exam. Can it make some flashcards or questions?
+      <div class="repo-desc">https://developer.nvidia.com/blog/introducing-nemotron-3-super-an-open-hybrid-mamba-transformer-moe-for-agentic-reasoning/?nvid=nv-int-csfg-844859
 
-Then Gemini. Big context, converting PDFs, using markdown, custom system instruction on Ai Studio, API.
+120B MoE, 12B active.
 
-Then LM Studio. We can run this locally???
-
-Then LocalLLama. Now</div>
-      <div class="repo-summary">概要：这篇内容围绕「I regret ever finding LocalLLaMA」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“It all started with using "the AI" to help”。信息更偏社区反馈与实测体验。</div>
+</div>
+      <div class="repo-summary">概要：这篇内容围绕「Nemotron 3 Super Released」展开，主要在讲：发布了新的能力或版本。文中提到“120B MoE, 12B active.”。信息更偏社区反馈与实测体验。</div>
     </article>
   
 
-    <article class="card repo-item" id="item-5" data-tags="Persona" data-source="Reddit">
-      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rq7jtm/qwen3535ba3b_uncensored_aggressive_gguf_release/" target="_blank" rel="noreferrer">5. Qwen3.5-35B-A3B Uncensored (Aggressive) — GGUF Release</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 482 💬117 · 时间 2026-03-10</div>
-      <div class="tags"><span class="tag">Persona</span></div>
-      <div class="repo-desc">The one everyone's been asking for. Qwen3.5-35B-A3B Aggressive is out!
-
-Aggressive = no refusals; it has NO personality changes/alterations or any of that, it is the ORIGINAL release of Qwen just completely uncensored
-
-[https://huggingface.co/HauhauCS/Qwen3.5-35B-A3B-Uncensored-H</div>
-      <div class="repo-summary">概要：这篇内容围绕「Qwen3.5 35B A3B Uncensored (Aggressive) — 」展开，主要在讲：发布了新的能力或版本。文中提到“The one everyone's been asking for. Qwen3.”。信息更偏社区反馈与实测体验。</div>
-    </article>
-  
-
-    <article class="card repo-item" id="item-6" data-tags="MCP,Eval" data-source="GitHub">
-      <a class="repo-title" href="https://github.com/hidai25/eval-view" target="_blank" rel="noreferrer">6. hidai25/eval-view</a>
-      <div class="repo-meta">来源 GitHub · 热度 ⭐ 62 · 时间 2026-03-10</div>
-      <div class="tags"><span class="tag">MCP</span><span class="tag">Eval</span></div>
-      <div class="repo-desc">Proof your AI agent still works. Regression testing with golden baselines, tool-call diffing, and output drift detection. MCP server + Claude Code skills. LangGraph, CrewAI, Anthropic, OpenAI.</div>
-      <div class="repo-summary">概要：这篇内容围绕「hidai25/eval view」展开，主要在讲：强调评测对比与稳定性验证；提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“Proof your AI agent still works. Regressio”。信息更偏工程实现与代码能力</div>
-    </article>
-  
-
-    <article class="card repo-item" id="item-7" data-tags="General" data-source="Reddit">
-      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rq0our/we_need_a_minimum_karma_rule_for_commenting_and/" target="_blank" rel="noreferrer">7. We need a minimum karma rule for commenting and posting</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 266 💬110 · 时间 2026-03-10</div>
+    <article class="card repo-item" id="item-5" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://www.wired.com/story/nvidia-investing-26-billion-open-source-models/" target="_blank" rel="noreferrer">5. Nvidia Will Spend $26 Billion to Build Open-Weight AI Models, Filings Show</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 632 💬93 · 时间 2026-03-11</div>
       <div class="tags"><span class="tag">General</span></div>
-      <div class="repo-desc">so many slop bots here. it’s becoming a kindergarten for openclaws. bots responding to bots.</div>
-      <div class="repo-summary">概要：这篇内容围绕「We need a minimum karma rule for commentin」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“so many slop bots here. it’s becoming a ki”。信息更偏社区反馈与实测体验</div>
+      <div class="repo-desc"></div>
+      <div class="repo-summary">概要：这篇内容围绕「Nvidia Will Spend $26 Billion to Build Ope」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Nvidia Will Spend $26 Billion to Build Ope”。信息更偏社区反馈与实测体验</div>
     </article>
   
 
-    <article class="card repo-item" id="item-8" data-tags="Eval" data-source="Reddit">
-      <a class="repo-title" href="https://v.redd.it/fbh8py3srcog1" target="_blank" rel="noreferrer">8. New benchmark just dropped.</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 198 💬32 · 时间 2026-03-11</div>
+    <article class="card repo-item" id="item-6" data-tags="Eval" data-source="Reddit">
+      <a class="repo-title" href="https://v.redd.it/fbh8py3srcog1" target="_blank" rel="noreferrer">6. New benchmark just dropped.</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 1021 💬118 · 时间 2026-03-11</div>
       <div class="tags"><span class="tag">Eval</span></div>
       <div class="repo-desc">Write the complete  Three.js code for a scene featuring Michael Jackson, Pepe the Frog, Donald Trump, and Elon Musk performing the "Thriller" choreography, aiming for maximum visual perfection, detailed animation, lighting, high-quality rendering, and an overall  cinematic.</div>
       <div class="repo-summary">概要：这篇内容围绕「New benchmark just dropped.」展开，主要在讲：强调评测对比与稳定性验证。文中提到“Write the complete Three.js code for a sce”。信息更偏社区反馈与实测体验。</div>
     </article>
   
 
-    <article class="card repo-item" id="item-9" data-tags="Eval" data-source="Reddit">
-      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rpw17y/ryzen_ai_max_395_128gb_qwen_35_35b122b_benchmarks/" target="_blank" rel="noreferrer">9. Ryzen AI Max 395+ 128GB - Qwen 3.5 35B/122B Benchmarks (100k-250K Context)  + Others (MoE)</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 138 💬83 · 时间 2026-03-10</div>
-      <div class="tags"><span class="tag">Eval</span></div>
-      <div class="repo-desc">Hey everyone,
-
-Finally got my Framework Desktop! I've never used Linux before but it was dead simple to get Fedora up and running with the recommended toolboxes (big thanks to the amazing community here).
-
-Seen a lot of benchmarks recently but they're all targeting small context </div>
-      <div class="repo-summary">概要：这篇内容围绕「Ryzen AI Max 395+ 128GB Qwen 3.5 35B/122B 」展开，主要在讲：强调评测对比与稳定性验证。文中提到“Hey everyone, Finally got my Framework Des”。信息更偏社区反馈与实测体验。</div>
+    <article class="card repo-item" id="item-7" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://interestingengineering.com/ai-robotics/meta-buys-moltbook-ai-agent-network" target="_blank" rel="noreferrer">7. Meta buys Moltbook, viral social network where AI agents interact</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 164 💬45 · 时间 2026-03-11</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc"></div>
+      <div class="repo-summary">概要：这篇内容围绕「Meta buys Moltbook, viral social network w」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Meta buys Moltbook, viral social network w”。信息更偏社区反馈与实测体验</div>
     </article>
   
 
-    <article class="card repo-item" id="item-10" data-tags="Eval" data-source="Reddit">
-      <a class="repo-title" href="https://reddit.com/r/MachineLearning/comments/1rq6g08/how_i_topped_the_open_llm_leaderboard_using_2x/" target="_blank" rel="noreferrer">10. How I topped the Open LLM Leaderboard using 2x 4090 GPUs - Research notes in Blog form</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 129 💬19 · 时间 2026-03-10</div>
+    <article class="card repo-item" id="item-8" data-tags="Eval" data-source="GitHub">
+      <a class="repo-title" href="https://github.com/hidai25/eval-view" target="_blank" rel="noreferrer">8. hidai25/eval-view</a>
+      <div class="repo-meta">来源 GitHub · 热度 ⭐ 62 · 时间 2026-03-11</div>
       <div class="tags"><span class="tag">Eval</span></div>
-      <div class="repo-desc">A few years ago, I found that duplicating a specific block of 7 middle layers in Qwen2-72B, without modifying any weights, improved performance across all Open LLM Leaderboard benchmarks and took #1 place. As of 2026, the top 4 models on that leaderboard are still descendants.
+      <div class="repo-desc">Regression testing for AI agents. Snapshot behavior, diff tool calls, catch   regressions in CI. Works with LangGraph, CrewAI, OpenAI, Anthropic.</div>
+      <div class="repo-summary">概要：这篇内容围绕「hidai25/eval view」展开，主要在讲：强调评测对比与稳定性验证；提供工具调用/系统集成能力；支持多智能体编排与流程化落地。文中提到“Regression testing for AI agents. Snapshot”。信息更偏工程实现与代码能力</div>
+    </article>
+  
 
-T</div>
-      <div class="repo-summary">概要：这篇内容围绕「How I topped the Open LLM Leaderboard usin」展开，主要在讲：强调评测对比与稳定性验证。文中提到“A few years ago, I found that duplicating ”。信息更偏社区反馈与实测体验。</div>
+    <article class="card repo-item" id="item-9" data-tags="Persona" data-source="HackerNews">
+      <a class="repo-title" href="https://www.ensue-network.ai/autoresearch" target="_blank" rel="noreferrer">9. Show HN: Autoresearch@home</a>
+      <div class="repo-meta">来源 HackerNews · 热度 ▲61 💬10 · 时间 2026-03-11</div>
+      <div class="tags"><span class="tag">Persona</span></div>
+      <div class="repo-desc">autoresearch@home is a collaborative research collective where AI agents share GPU resources to collectively improve a language model. Think SETI@home, but for model training.<p>How it works: Agents read the current best result, propose a hypothesis, modify train.py, run the experiment on your GPU, and publish results back. When an agent beats the current best validation loss, that becomes the new baseline for every other agent. Agents learn from great runs and failures, since we&#x27;re using Ensue as the collective memory layer.<p>This project extends Karpathy&#x27;s autoresearch by adding the missing coordination layer so agents can actually build on each other&#x27;s work.<p>To participate, you need an agent and a GPU. The agent handles everything: cloning the repo, connecting to the collective, picking experiments, running them, publishing results, and asking you to verify you&#x27;re a real person via email.<p>Send this prompt to your agent to get started: Read <a href="https:&#x2F;&#x2F;github.com&#x2F;mutable-state-inc&#x2F;autoresearch-at-home" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;mutable-state-inc&#x2F;autoresearch-at-home</a> follow the instructions join autoresearch and start contributing.<p>This whole experiment is to prove that agents work better when they can build off other agents. The timeline is live, so you can watch experiments land in real time.</div>
+      <div class="repo-summary">概要：这篇内容围绕「Show HN: Autoresearch@home」展开，主要在讲：涉及记忆层与状态管理；含研究视角与方法论信号。文中提到“autoresearch@home is a collaborative resea”。信息更偏行业观点与趋势讨论。</div>
+    </article>
+  
+
+    <article class="card repo-item" id="item-10" data-tags="General" data-source="Reddit">
+      <a class="repo-title" href="https://v.redd.it/5oakjs94hgog1" target="_blank" rel="noreferrer">10. llama.cpp on $500 MacBook Neo: Prompt: 7.8 t/s  / Generation: 3.9 t/s on Qwen3.5 9B Q3_K_M</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 295 💬108 · 时间 2026-03-11</div>
+      <div class="tags"><span class="tag">General</span></div>
+      <div class="repo-desc">Just compiled llama.cpp on MacBook Neo with 8 Gb RAM and 9b Qwen 3.5 and it works (slowly, but anyway)
+
+  
+Config used:
+
+    Build
+    - llama.cpp version: 8294 (76ea1c1c4)
+    
+    Machine
+    - Model: MacBook Neo (Mac17,5)
+    - Chip: Apple A18 Pro
+    - CPU: 6 cores (2 perform</div>
+      <div class="repo-summary">概要：这篇内容围绕「llama.cpp on $500 MacBook Neo: Prompt: 7.8」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“Just compiled llama.cpp on MacBook Neo wit”。信息更偏社区反馈与实测体验</div>
     </article>
   
 
     <article class="card repo-item" id="item-11" data-tags="General" data-source="Reddit">
-      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rptdpl/fish_audio_releases_s2_opensource_controllable/" target="_blank" rel="noreferrer">11. Fish Audio Releases S2: open-source, controllable and expressive TTS model</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 233 💬64 · 时间 2026-03-10</div>
+      <a class="repo-title" href="https://reddit.com/r/LocalLLaMA/comments/1rrisqn/i_was_backend_lead_at_manus_after_building_agents/" target="_blank" rel="noreferrer">11. I was backend lead at Manus. After building agents for 2 years, I stopped using function calling entirely. Here's what I use instead.</a>
+      <div class="repo-meta">来源 Reddit · 热度 ⬆ 176 💬60 · 时间 2026-03-12</div>
       <div class="tags"><span class="tag">General</span></div>
-      <div class="repo-desc">Fish Audio is open-sourcing S2, where you can direct voices for maximum expressivity with precision using natural language emotion tags like \[whispers sweetly\] or \[laughing nervously\]. You can generate multi-speaker dialogue in one pass, time-to-first-audio is 100ms, and 80+ </div>
-      <div class="repo-summary">概要：这篇内容围绕「Fish Audio Releases S2: open source, contr」展开，主要在讲：发布了新的能力或版本。文中提到“Fish Audio is open sourcing S2, where you ”。信息更偏社区反馈与实测体验。</div>
+      <div class="repo-desc">&gt; English is not my first language. I wrote this in Chinese and translated it with AI help. The writing may have some AI flavor, but the design decisions, the production failures, and the thinking that distilled them into principles — those are mine.
+
+I was a backend lead at M</div>
+      <div class="repo-summary">概要：这篇内容围绕「I was backend lead at Manus. After buildin」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“&gt; English is not my first language. I w”。信息更偏社区反馈与实测体验</div>
     </article>
   
 
-    <article class="card repo-item" id="item-12" data-tags="General" data-source="Reddit">
-      <a class="repo-title" href="https://github.com/ggml-org/llama.cpp/commit/26c084662903ddaca19bef982831bfb0856e8257" target="_blank" rel="noreferrer">12. Happy birthday, llama.cpp!</a>
-      <div class="repo-meta">来源 Reddit · 热度 ⬆ 274 💬14 · 时间 2026-03-10</div>
+    <article class="card repo-item" id="item-12" data-tags="General" data-source="HackerNews">
+      <a class="repo-title" href="https://github.com/manuelschipper/nah/" target="_blank" rel="noreferrer">12. Show HN: A context-aware permission guard for Claude Code</a>
+      <div class="repo-meta">来源 HackerNews · 热度 ▲92 💬38 · 时间 2026-03-11</div>
       <div class="tags"><span class="tag">General</span></div>
-      <div class="repo-desc">I remember when the original llama models leaked from Meta and torrenting them onto my PC to try llama.cpp out. Despite it being really stupid and hardly getting a couple tokens per second in a template-less completion mode, I was shocked. You could really feel the ground shiftin</div>
-      <div class="repo-summary">概要：这篇内容围绕「Happy birthday, llama.cpp!」展开，主要在讲：聚焦智能体工程实践与平台能力演进。文中提到“I remember when the original llama models ”。信息更偏社区反馈与实测体验。</div>
+      <div class="repo-desc">We needed something like --dangerously-skip-permissions that doesn’t nuke your untracked files, exfiltrate your keys, or install malware.<p>Claude Code&#x27;s permission system is allow-or-deny per tool, but that doesn’t really scale. Deleting some files is fine sometimes. And git checkout is sometimes not fine. Even when you curate permissions, 200 IQ Opus can find a way around it. Maintaining a deny list is a fool&#x27;s errand.<p>nah is a PreToolUse hook that classifies every tool call by what it actually does, using a deterministic classifier that runs in milliseconds. It maps commands to action types like filesystem_read, package_run, db_write, git_history_rewrite, and applies policies: allow, context (depends on the target), ask, or block.<p>Not everything can be classified, so you can optionally escalate ambiguous stuff to an LLM, but that’s not required. Anything unresolved you can approve, and configure the taxonomy so you don’t get asked again.<p>It works out of the box with sane defaults, no config needed. But you can customize it fully if you want to.<p>No dependencies, stdlib Python, MIT.<p>pip install nah &amp;&amp; nah install<p><a href="https:&#x2F;&#x2F;github.com&#x2F;manuelschipper&#x2F;nah" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;manuelschipper&#x2F;nah</a></div>
+      <div class="repo-summary">概要：这篇内容围绕「Show HN: A context aware permission guard 」展开，主要在讲：提供工具调用/系统集成能力；包含权限与安全相关设计。文中提到“We needed something like dangerously skip ”。信息更偏</div>
     </article>
   
     </section>
@@ -169,13 +175,14 @@ T</div>
     <section class="card">
       <h2 style="margin-top:0;">技术负责人视角（本日Top3落地建议）</h2>
       <ul><li><b>1. doobidoo/mcp-memory-service</b>（GitHub）：本周安排 0.5~1 天验证并纳入周报追踪。</li>
-<li><b>2. This guy 🤡</b>（Reddit）：本周安排 0.5~1 天验证并纳入周报追踪。</li>
-<li><b>3. How I topped the Open LLM Leaderboard using 2x 4090 GPUs — no weights modified.</b>（Reddit）：本周安排 0.5~1 天验证并纳入周报追踪。</li></ul>
+<li><b>2. M5 Max just arrived - benchmarks incoming</b>（Reddit）：本周安排 0.5~1 天验证并纳入周报追踪。</li>
+<li><b>3. Show HN: Open-source browser for AI agents</b>（HackerNews）：本周安排 0.5~1 天验证并纳入周报追踪。</li></ul>
     </section>
 
     <section class="card">
       <h2 style="margin-top:0;">历史归档</h2>
-      <ul><li><a href="../memory/agent-tech-daily/2026-03-11.md">2026-03-11</a></li>
+      <ul><li><a href="../memory/agent-tech-daily/2026-03-12.md">2026-03-12</a></li>
+<li><a href="../memory/agent-tech-daily/2026-03-11.md">2026-03-11</a></li>
 <li><a href="../memory/agent-tech-daily/2026-03-10.md">2026-03-10</a></li>
 <li><a href="../memory/agent-tech-daily/2026-03-09.md">2026-03-09</a></li>
 <li><a href="../memory/agent-tech-daily/2026-03-08.md">2026-03-08</a></li>
